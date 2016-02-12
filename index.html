@@ -53,44 +53,43 @@
 	      line-height: 1.42857143 !important;
 	      letter-spacing: 4px;
 	      border-radius: 0;
-	      font-family: Montserrat, sans-serif;
 	  }
-	  .navbar li a, .navbar .navbar-brand {
+	  .navbar ul {
+	  	padding-left: 0px;
+	  	list-style-type: none;
+	  }
+	  .navbar li {
+	  	padding: 15px;
+	  }
+	  .navbar li a{
+	  	padding: 15px;
+	  	text-decoration: none;
 	      color: #fff !important;
+	  }
+	  .navbar-nav li:hover{
+	      background-color: #fff !important;
 	  }
 	  .navbar-nav li a:hover, .navbar-nav li.active a {
 	      color: #f4511e !important;
 	      background-color: #fff !important;
 	  }
-	  .navbar-default .navbar-toggle {
+	  .navbar-toggle {
 	      border-color: transparent;
 	      color: #fff !important;
+	  }
+	  .icon-bar {
+	  	background-color: #fff !important;
 	  }
 	  footer .glyphicon {
 	      font-size: 20px;
 	      margin-bottom: 20px;
 	      color: #f4511e;
 	  }
-	  @media screen and (max-width: 768px) {
-	    .col-sm-4 {
-	      text-align: center;
-	      margin: 25px 0;
-	    }
-	    .btn-lg {
-	        width: 100%;
-	        margin-bottom: 35px;
-	    }
-	  }
-	  @media screen and (max-width: 480px) {
-	    .logo {
-	        font-size: 150px;
-	    }
-	  }
 	  </style>
 </head>
 <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
 
-<nav class="navbar navbar-default navbar-fixed-top">
+<nav class="navbar navbar-fixed-top">
   <div class="container">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
@@ -101,7 +100,7 @@
       <a href="#myPage"><img src="Immagini/logo.png" class="img-responsive img-circle margin" style="display:inline" alt="Logo del gruppo Sweeney Threads" width="40" height="40"></a>
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
-      <ul class="nav navbar-nav navbar-right">
+      <ul class="navbar-nav navbar-right">
         <li><a href="#about">CHI SIAMO</a></li>
         <li><a href="#profile">PROFILO GITHUB</a></li>
         <li><a href="#repo">REPOSITORY DI CONSEGNA</a></li>
@@ -138,7 +137,9 @@
     <div class="col-sm-12">
       <h2>Profilo GitHub</h2>
       <p>Il nostro profilo GitHub contiene tutte le repository relative allo sviluppo del nostro progetto.</p></br>
-      <p><a href="https://github.com/SweeneyThreads">Vai al profilo</a></p>
+      <form method="get" action="https://github.com/SweeneyThreads">
+    	<button type="submit" class="btn btn-default">Vai al profilo</button>
+	  </form>
     </div>
   </div>
 </div>
@@ -147,8 +148,12 @@
   <div class="row">
     <div class="col-sm-12">
       <h2>Repository di consegna</h2>
-      <p>Questo repository contiene tutti i documenti relativi all'ultima consegna ufficiale effettuata dal gruppo.</p></br>
-      <p><a href="https://github.com/SweeneyThreads/ConsegnaActorbase">Vai al repository</a></p>
+      <p>Questo repository contiene tutti i documenti relativi all'ultima consegna ufficiale effettuata dal gruppo.</p>
+      <p><span class="label label-success">Ultima consegna effettuata</span></p>
+      <p>Revisione dei requisiti (RR) in data 22 Gennaio 2016 </p></br>
+      <form method="get" action="https://github.com/SweeneyThreads/ConsegnaActorbase">
+    	<button type="submit" class="btn btn-default">Vai al repository</button>
+	  </form>
     </div>
   </div>
 </div>
