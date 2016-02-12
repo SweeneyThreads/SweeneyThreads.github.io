@@ -1,9 +1,167 @@
 <!DOCTYPE html>
-<html>
+<html lang="it">
 <head>
-	<title>SweeneyThreads - GitHub page</title>
+	<title>SweeneyThreads</title>
+	<meta charset='utf-8'>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Documentazione prodotta per il corso Ingegneria del Software a.a 2015-2016">
+	<meta name="keywords" content="Ingegneria del Software, Analisi dei requisiti, Progettazione, SweeneyThreads">
+	<meta name="author" content="Bonato Paolo, Bortolazzo Matteo, Biggeri Mattia, Maino Elia, Nicoletti Luca, Padovan Tommaso, Tommasin Davide">
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+	<link href="http://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+	<link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+	<style>
+	  body {
+	      font: 400 15px Lato, sans-serif;
+	      line-height: 1.8;
+	      color: #818181;
+	  }
+	  h2 {
+	      font-size: 24px;
+	      text-transform: uppercase;
+	      color: #303030;
+	      font-weight: 600;
+	      margin-bottom: 30px;
+	  }
+	  h4 {
+	      font-size: 19px;
+	      line-height: 1.375em;
+	      color: #303030;
+	      font-weight: 400;
+	      margin-bottom: 30px;
+	  }  
+	  .jumbotron {
+	      background-color: #f4511e;
+	      color: #fff;
+	      padding: 100px 25px;
+	      font-family: Montserrat, sans-serif;
+	  }
+	  .container-fluid {
+	      padding: 60px 50px;
+	  }
+	  .bg-grey {
+	      background-color: #f6f6f6;
+	  }
+	  .navbar {
+	      margin-bottom: 0;
+	      background-color: #f4511e;
+	      z-index: 9999;
+	      border: 0;
+	      font-size: 12px !important;
+	      line-height: 1.42857143 !important;
+	      letter-spacing: 4px;
+	      border-radius: 0;
+	      font-family: Montserrat, sans-serif;
+	  }
+	  .navbar li a, .navbar .navbar-brand {
+	      color: #fff !important;
+	  }
+	  .navbar-nav li a:hover, .navbar-nav li.active a {
+	      color: #f4511e !important;
+	      background-color: #fff !important;
+	  }
+	  .navbar-default .navbar-toggle {
+	      border-color: transparent;
+	      color: #fff !important;
+	  }
+	  footer .glyphicon {
+	      font-size: 20px;
+	      margin-bottom: 20px;
+	      color: #f4511e;
+	  }
+	  @media screen and (max-width: 768px) {
+	    .col-sm-4 {
+	      text-align: center;
+	      margin: 25px 0;
+	    }
+	    .btn-lg {
+	        width: 100%;
+	        margin-bottom: 35px;
+	    }
+	  }
+	  @media screen and (max-width: 480px) {
+	    .logo {
+	        font-size: 150px;
+	    }
+	  }
+	  </style>
 </head>
-<body>
-	<a href="https://github.com/SweeneyThreads/ConsegnaActorbase">Consegna materiale revisione</a>
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a href="#myPage"><img src="Immagini/logo.png" class="img-responsive img-circle margin" style="display:inline" alt="Logo del gruppo Sweeney Threads" width="40" height="40"></a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#about">CHI SIAMO</a></li>
+        <li><a href="#profile">PROFILO GITHUB</a></li>
+        <li><a href="#repo">REPOSITORY DI CONSEGNA</a></li>
+        <li><a href="#contact">CONTATTACI</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="jumbotron text-center">
+  <h1>Sweeney Threads</h1> 
+</div>
+
+<div id="about" class="container-fluid">
+  <div class="row">
+    <div class="col-sm-12">
+      <h2>Chi siamo</h2>
+      <h4>Siamo un gruppo formatosi all'interno del corso di Ingegneria del software, presso l'Università degli studi di Padova durante l'anno accademico 2015/2016.</h4><br>
+      <ul>
+      	<li>Bonato Paolo</li>
+      	<li>Bortolazzo Matteo</li>
+      	<li>Biggeri Mattia</li>
+      	<li>Maino Elia</li>
+      	<li>Nicoletti Luca</li>
+      	<li>Padovan Tommaso</li>
+      	<li>Tommasin Davide</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div id="profile" class="container-fluid bg-grey">
+  <div class="row">
+    <div class="col-sm-12">
+      <h2>Profilo GitHub</h2>
+      <p>Il nostro profilo GitHub contiene tutte le repository relative allo sviluppo del nostro progetto.</p></br>
+      <p><a href="https://github.com/SweeneyThreads">Vai al profilo</a></p>
+    </div>
+  </div>
+</div>
+
+<div id="repo" class="container-fluid">
+  <div class="row">
+    <div class="col-sm-12">
+      <h2>Repository di consegna</h2>
+      <p>Questo repository contiene tutti i documenti relativi all'ultima consegna ufficiale effettuata dal gruppo.</p></br>
+      <p><a href="https://github.com/SweeneyThreads/ConsegnaActorbase">Vai al repository</a></p>
+    </div>
+  </div>
+</div>
+
+<div id="contact" class="container-fluid bg-grey">
+  <h2 class="text-center">CONTATTI</h2>
+  <div class="row">
+    <div class="col-sm-12">
+      <p class="text-center">Contattaci al nostro indirizzo email per qualsiasi informazione</p>
+      <p class="text-center"><span class="glyphicon glyphicon-envelope"></span> <a href="mailto:sweeneythreads@gmail.com">sweeneythreads@gmail.com</a></p>	   
+    </div>
+  </div>
+</div> 
+
 </body>
 </html>
