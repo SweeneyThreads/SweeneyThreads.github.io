@@ -1,0 +1,48 @@
+body {
+    background-color: #f5f6f7
+}
+
+header {
+    margin-top: -20px;
+    background-image: url('../img/servers_black.jpg');
+    color: white;
+    padding: 150px 0;
+}
+
+h1 {
+    font-size: 50px;
+}
+
+h2, h3 {
+    font-size: 20px;
+    color: rgba(230, 230, 230, 1)
+}
+
+.logo {
+    height: 150px;
+}
+
+.small-logo {
+    position: top left;
+    height: 30px;
+}
+
+section {
+    text-align: center;
+    padding: 50px;
+    margin-top: 25px;
+}
+
+.blue-section {
+    background-color: #03a9f4;
+    color: white;
+}
+
+.blue-section a {
+    color: #14526b;
+}
+
+.blue-section strong {
+    font-weight: normal;
+    color: dimgray;
+}

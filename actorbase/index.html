@@ -1,1 +1,120 @@
-<h1>Actorbase</h1>
+﻿<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Actorbase</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="The first distributed NoSQL key-value database that uses the actor model.">
+    <meta name="author" content="Matteo Bortolazzo">
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="57x57" href="src/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="src/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="src/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="src/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="src/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="src/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="src/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="src/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="src/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="src/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="src/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="src/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="src/favicon/favicon-16x16.png">
+    <link rel="manifest" href="src/favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="src/favicon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <!-- Material Design fonts -->
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700">
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/icon?family=Material+Icons">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" type="text/css" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <!-- Bootstrap Material Design -->
+    <link rel="stylesheet" type="text/css" href="src/css/bootstrap-material-design.min.css">
+    <link rel="stylesheet" type="text/css" href="src/css/ripples.min.css">
+    <!-- Style -->
+    <link rel="stylesheet" type="text/css" href="src/css/index.css">
+</head>
+<script src="src/js/jquery-2.2.2.min.js"></script>
+<script src="src/js/bootstrap.min.js"></script>
+<script src="src/js/material.min.js"></script>
+<script src="src/js/ripples.min.js"></script>
+<script>
+    $.material.init()
+</script>
+<body>
+    <div class="navbar navbar-info">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#">What is it</a></li>
+                    <li><a href="downloads/">Download</a></li>  
+                    <li><a href="https://www.gitbook.com/book/sweeneythreads/actorbase-user-s-manual/details">Guide</a></li>    
+                    <li><a href="docs/">Docs</a></li>
+                    <li><a href="https://github.com/SweeneyThreads/Actorbase">Source</a></li>
+                </ul>
+            </div>
+        </div>        
+    </div>    
+    <header class="header">        
+        <div class="container">
+            <img class="small-logo" src="src/img/actorbase_small_logo.png" alt="Actorbase small logo" />        
+            <hgroup>
+                <h1>Welcome to Actorbase</h1>
+                <h2>The first <strong>distributed NoSQL</strong> key-value database that uses the actor model.</h2>
+                <a href="https://www.gitbook.com/book/sweeneythreads/actorbase-user-s-manual/details" class="btn btn-raised btn-info">Let's start<div class="ripple-container"></div></a>
+            </hgroup>
+        </div>
+    </header>
+    <section id="downloads" class="panel panel-default container">        
+        <h3>Download</h3>
+        <div>
+            Download the database, the command line client and the JVM driver connector, all in one place.
+        </div>
+        <a href="download/" class="btn btn-raised btn-info">Go to the download page<div class="ripple-container"></div></a>
+    </section>
+
+    <section id="howitwork" class="blue-section">    
+        <div class="container-fluid">    
+            <h3>How it works</h3>
+            <div>
+                <div>
+                    Actorbase is written in <a href="http://www.scala-lang.org/">Scala</a>
+                    with the <a href="http://akka.io/">Akka</a> toolkit and runtime.
+                </div>
+                <div>
+                    It is based on the actor model, every actor talk each other only with <strong>messages</strong>.
+                 </div>
+                 <div>
+                    There are several types of actor, each one <strong>reacts</strong> in in different ways to messages.
+                 </div>
+                 <div>
+                    An actor can have <strong>children</strong>, if a child dies the parent reacts.
+                </div>
+            </div>
+            <br/>
+            <p>
+                With this in mind <a href="http://sweeneythreads.github.io/">we</a> built a complete distributed key-value database and released it with MIT licence.
+            </p>
+            <p>
+                If you want to know how it works in detail check <a href="https://www.gitbook.com/book/sweeneythreads/actorbase-user-s-manual/details">this</a> out.
+            </p>
+            <a href="https://github.com/SweeneyThreads/Actorbase" class="btn btn-raised btn-success">Help us<div class="ripple-container"></div></a>
+        </div>
+    </section>
+    <footer>
+        
+    </footer>
+
+</body>
+
+</html>
