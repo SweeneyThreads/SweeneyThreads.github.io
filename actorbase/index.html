@@ -18,7 +18,7 @@
     <link rel="apple-touch-icon" sizes="144x144" href="src/favicon/apple-icon-144x144.png">
     <link rel="apple-touch-icon" sizes="152x152" href="src/favicon/apple-icon-152x152.png">
     <link rel="apple-touch-icon" sizes="180x180" href="src/favicon/apple-icon-180x180.png">
-    <link rel="icon" type="image/png" sizes="192x192"  href="src/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="src/favicon/android-icon-192x192.png">
     <link rel="icon" type="image/png" sizes="32x32" href="src/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="96x96" href="src/favicon/favicon-96x96.png">
     <link rel="icon" type="image/png" sizes="16x16" href="src/favicon/favicon-16x16.png">
@@ -44,6 +44,7 @@
 <script>
     $.material.init()
 </script>
+
 <body>
     <div class="navbar navbar-info">
         <div class="container-fluid">
@@ -57,62 +58,46 @@
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav navbar-right">
                     <li><a href="#">What is it</a></li>
-                    <li><a href="downloads/">Download</a></li>  
-                    <li><a href="https://www.gitbook.com/book/sweeneythreads/actorbase-user-s-manual/details">Guide</a></li>    
+                    <li><a href="downloads/">Download</a></li>
+                    <li><a href="https://www.gitbook.com/book/sweeneythreads/actorbase-user-s-manual/details">Guide</a></li>
                     <li><a href="docs/">Docs</a></li>
                     <li><a href="https://github.com/SweeneyThreads/Actorbase">Source</a></li>
                 </ul>
             </div>
-        </div>        
-    </div>    
-    <header class="header">        
-        <div class="container">
-            <img class="small-logo" src="src/img/actorbase_small_logo.png" alt="Actorbase small logo" />        
+        </div>
+    </div>
+    <header id="mainheader" class="header">
+        <div class="container header-content">
+            <img class="small-logo" src="src/img/actorbase_small_logo.png" alt="Actorbase small logo" />
             <hgroup>
                 <h1>Welcome to Actorbase</h1>
                 <h2>The first <strong>distributed NoSQL</strong> key-value database that uses the actor model.</h2>
-                <a href="https://www.gitbook.com/book/sweeneythreads/actorbase-user-s-manual/details" class="btn btn-raised btn-info">Let's start<div class="ripple-container"></div></a>
+                <a href="https://www.gitbook.com/book/sweeneythreads/actorbase-user-s-manual/details" class="btn btn-raised btn-info">Let's start!<div class="ripple-container"></div></a>
             </hgroup>
         </div>
     </header>
-    <section id="downloads" class="panel panel-default container">        
+    <section id="downloads" class="panel panel-default container">
         <h3>Download</h3>
         <div>
-            Download the database, the command line client and the JVM driver connector, all in one place.
+            Download the database engine, the command line client or the JVM driver connector, for every platform, all in one place.
         </div>
         <a href="download/" class="btn btn-raised btn-info">Go to the download page<div class="ripple-container"></div></a>
     </section>
 
-    <section id="howitwork" class="blue-section">    
-        <div class="container-fluid">    
-            <h3>How it works</h3>
-            <div>
-                <div>
-                    Actorbase is written in <a href="http://www.scala-lang.org/">Scala</a>
-                    with the <a href="http://akka.io/">Akka</a> toolkit and runtime.
-                </div>
-                <div>
-                    It is based on the actor model, every actor talk each other only with <strong>messages</strong>.
-                 </div>
-                 <div>
-                    There are several types of actor, each one <strong>reacts</strong> in in different ways to messages.
-                 </div>
-                 <div>
-                    An actor can have <strong>children</strong>, if a child dies the parent reacts.
-                </div>
+    <section id="howitwork" style="margin-top: -30px">
+        <div class="center-section">
+            <h3>OPEN SOURCE</h3>
+            <div class="progress separator">
+                <div class="progress-bar progress-bar-info" style="width: 100%"></div>
             </div>
-            <br/>
-            <p>
-                With this in mind <a href="http://sweeneythreads.github.io/">we</a> built a complete distributed key-value database and released it with MIT licence.
-            </p>
-            <p>
-                If you want to know how it works in detail check <a href="https://www.gitbook.com/book/sweeneythreads/actorbase-user-s-manual/details">this</a> out.
+            <p>             
+                The code is completely open on GitHub with MIT licence!
             </p>
             <a href="https://github.com/SweeneyThreads/Actorbase" class="btn btn-raised btn-success">Help us<div class="ripple-container"></div></a>
         </div>
     </section>
     <footer>
-        
+
     </footer>
 
 </body>

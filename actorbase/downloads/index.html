@@ -18,7 +18,7 @@
     <link rel="apple-touch-icon" sizes="144x144" href="../src/favicon/apple-icon-144x144.png">
     <link rel="apple-touch-icon" sizes="152x152" href="../src/favicon/apple-icon-152x152.png">
     <link rel="apple-touch-icon" sizes="180x180" href="../src/favicon/apple-icon-180x180.png">
-    <link rel="icon" type="image/png" sizes="192x192"  href="../src/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="../src/favicon/android-icon-192x192.png">
     <link rel="icon" type="image/png" sizes="32x32" href="../src/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="96x96" href="../src/favicon/favicon-96x96.png">
     <link rel="icon" type="image/png" sizes="16x16" href="../src/favicon/favicon-16x16.png">
@@ -35,7 +35,7 @@
     <link rel="stylesheet" type="text/css" href="../src/css/bootstrap-material-design.min.css">
     <link rel="stylesheet" type="text/css" href="../src/css/ripples.min.css">
     <!-- Style -->
-    <link rel="stylesheet" type="text/css" href="../src/css/download.css">
+    <link rel="stylesheet" type="text/css" href="../src/css/index.css">
 </head>
 <script src="../src/js/jquery-2.2.2.min.js"></script>
 <script src="../src/js/bootstrap.min.js"></script>
@@ -44,6 +44,7 @@
 <script>
     $.material.init()
 </script>
+
 <body>
     <div class="navbar navbar-info">
         <div class="container-fluid">
@@ -57,105 +58,120 @@
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav navbar-right">
                     <li><a href="../">What is it</a></li>
-                    <li><a href="#">Download</a></li>  
-                    <li><a href="https://www.gitbook.com/book/sweeneythreads/actorbase-user-s-manual/details">Guide</a></li>    
+                    <li><a href="#">Download</a></li>
+                    <li><a href="https://www.gitbook.com/book/sweeneythreads/actorbase-user-s-manual/details">Guide</a></li>
                     <li><a href="../docs/">Docs</a></li>
                     <li><a href="https://github.com/SweeneyThreads/Actorbase">Source</a></li>
                 </ul>
             </div>
-        </div>        
-    </div>    
-    <header class="header">        
-        <div class="container">
-            <img class="small-logo" src="../src/img/actorbase_small_logo.png" alt="Actorbase small logo" />        
+        </div>
+    </div>
+    <header id="downloadheader" class="header">
+        <div class="container header-content">
+            <img class="small-logo" src="../src/img/actorbase_small_logo.png" alt="Actorbase small logo" />
             <hgroup>
                 <h1>Actorbase download page</h1>
-                <h2>Download the database, the command line client and the JVM connector driver.</h2>
+                <h2>Download you need to use or develop with Actorbase.</h2>
             </hgroup>
         </div>
     </header>
-    <section class="panel panel-default container"> 
-        
-            <h3>Server</h3>
-            <table class="table table-striped table-hover ">
-                <thead>
-                    <tr>
-                        <th>Operative System</th>
-                        <th>Version</th>
-                    </tr>
-                </thead>
-                <tbody>
-                <tr>
-                    <td>Windows</td>
-                    <td><a href="#">actorbase_server_1.0</a></td>
-                </tr>
-                <tr class="info">
-                    <td>Linux</td>
-                    <td><a href="#">actorbase_server_1.0</a></td>
-                </tr>
-                <tr >
-                    <td>Mac OS X</td>
-                    <td><a href="#">actorbase_server_1.0</a></td>
-                </tr>
-            </tbody>
-          </table>
-
-          </section>
-        <section class="panel panel-default container"> 
-            <h3>Command line client</h3>
-            <table class="table table-striped table-hover ">
-                <thead>
-                    <tr>
-                        <th>Operative System</th>
-                        <th>Version</th>
-                    </tr>
-                </thead>
-                <tbody>
-                <tr>
-                    <td>Windows</td>
-                    <td><a href="#">actorbase_client_1.0</a></td>
-                </tr>
-                <tr class="info">
-                    <td>Linux</td>
-                    <td><a href="#">actorbase_client_1.0</a></td>
-                </tr>
-                <tr >
-                    <td>Mac OS X</td>
-                    <td><a href="#">actorbase_client_1.0</a></td>
-                </tr>
-            </tbody>
-          </table>
-          </section>
-        <section class="panel panel-default container"> 
-            <h3>JVM driver connector</h3>
-            <table class="table table-striped table-hover ">
-                <thead>
-                    <tr>
-                        <th>Operative System</th>
-                        <th>Version</th>
-                    </tr>
-                </thead>
-                <tbody>
-                <tr>
-                    <td>Windows</td>
-                    <td><a href="#">actorbase_driver_1.0</a></td>
-                </tr>
-                <tr class="info">
-                    <td>Linux</td>
-                    <td><a href="#">actorbase_driver_1.0</a></td>
-                </tr>
-                <tr >
-                    <td>Mac OS X</td>
-                    <td><a href="#">actorbase_driver_1.0</a></td>
-                </tr>
-            </tbody>
-          </table>
-        <div>
+    <section class="container">
+        <div class="col-md-4">
+            <div class="panel panel-info">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Database engine</h3>
+                </div>
+                <div class="panel-body">
+                    <table class="table table-striped table-hover ">
+                        <thead>
+                            <tr>
+                                <th>File Description</th>
+                                <th>Download</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Windows x64</td>
+                                <td><a href="#">ab_server_1.0.zip</a></td>
+                            </tr>
+                            <tr>
+                                <td>Linux x64</td>
+                                <td><a href="#">ab_server_1.0.zip</a></td>
+                            </tr>
+                            <tr>
+                                <td>Mac OS X</td>
+                                <td><a href="#">ab_server_1.0.zip</a></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="panel panel-info">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Command line client</h3>
+                </div>
+                <div class="panel-body">
+                    <table class="table table-striped table-hover ">
+                        <thead>
+                            <tr>
+                                <th>File Description</th>
+                                <th>Download</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Windows x64</td>
+                                <td><a href="#">ab_client_1.0.zip</a></td>
+                            </tr>
+                            <tr>
+                                <td>Linux x64</td>
+                                <td><a href="#">ab_client_1.0.zip</a></td>
+                            </tr>
+                            <tr>
+                                <td>Mac OS X</td>
+                                <td><a href="#">ab_client_1.0.zip</a></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="panel panel-info">
+                <div class="panel-heading">
+                    <h3 class="panel-title">JVM driver connector</h3>
+                </div>
+                <div class="panel-body">
+                    <table class="table table-striped table-hover ">
+                        <thead>
+                            <tr>
+                                <th>File Description</th>
+                                <th>Download</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Windows x64</td>
+                                <td><a href="#">ab_driver_1.0.zip</a></td>
+                            </tr>
+                            <tr>
+                                <td>Linux x64</td>
+                                <td><a href="#">ab_driver_1.0.zip</a></td>
+                            </tr>
+                            <tr>
+                                <td>Mac OS X</td>
+                                <td><a href="#">ab_driver_1.0.zip</a></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
     </section>
     <footer>
-        
     </footer>
-
 </body>
 
 </html>

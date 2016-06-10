@@ -1,12 +1,31 @@
+body, html {
+  height: 100%;
+}
+
 body {
     background-color: #f5f6f7
 }
 
 header {
+    display: table;
+    height: 100%;
+    width: 100%;
+    text-align: center;
     margin-top: -20px;
-    background-image: url('../img/servers_black.jpg');
     color: white;
-    padding: 150px 0;
+}
+
+.header-content {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+#mainheader {    
+    background-image: url('../img/servers_black.jpg');
+}
+
+#downloadheader {    
+    background-image: url('../img/ocean_black.jpg');
 }
 
 h1 {
@@ -16,6 +35,10 @@ h1 {
 h2, h3 {
     font-size: 20px;
     color: rgba(230, 230, 230, 1)
+}
+
+h3 {
+    color: rgb(60,60,60)
 }
 
 .logo {
@@ -44,5 +67,15 @@ section {
 
 .blue-section strong {
     font-weight: normal;
-    color: dimgray;
+    color: lightpink;
+}
+
+table {
+    text-align: left;
+}
+
+.separator {
+    width: 10%;
+    margin-right: auto;
+    margin-left: auto;
 }
