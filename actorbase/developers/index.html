@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Actorbase</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Download the database, the command line client and the JVM connector driver.">
+    <meta name="author" content="Matteo Bortolazzo">
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="57x57" href="../src/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="../src/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="../src/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="../src/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="../src/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="../src/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="../src/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="../src/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../src/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="../src/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../src/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="../src/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../src/favicon/favicon-16x16.png">
+    <link rel="manifest" href="../src/favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="../src/favicon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <!-- Material Design fonts -->
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700">
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/icon?family=Material+Icons">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" type="text/css" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <!-- Bootstrap Material Design -->
+    <link rel="stylesheet" type="text/css" href="../src/css/bootstrap-material-design.min.css">
+    <link rel="stylesheet" type="text/css" href="../src/css/ripples.min.css">
+    <!-- Style -->
+    <link rel="stylesheet" type="text/css" href="../src/css/index.css">
+</head>
+<script src="../src/js/jquery-2.2.2.min.js"></script>
+<script src="../src/js/bootstrap.min.js"></script>
+<script src="../src/js/material.min.js"></script>
+<script src="../src/js/ripples.min.js"></script>
+<script>
+    $.material.init()
+</script>
+
+<body>
+    <nav class="navbar navbar-info">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="../"><img class="small-logo" src="../src/img/actorbase_small_logo_inverse.png" alt="Actorbase small logo" />
+                    <div class="ripple-container"></div>
+                </a>
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="../">What is it</a></li>
+                    <li><a href="../downloads">Download</a></li>
+                    <li><a href="https://www.gitbook.com/book/sweeneythreads/actorbase-user-s-manual/details">Guide</a></li>
+                    <li><a href="../docs/">Docs</a></li>
+                    <li class="active"><a href="#">Developer</a></li>
+                    <li><a href="https://github.com/SweeneyThreads/Actorbase">Source</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <header id="developerheader">
+        <div class="container">
+            <hgroup>
+                <div class="title_container">
+                    <h1>Developers</h1>
+                </div>
+                <h2>All you need to develop for Actorbase.</h2>
+            </hgroup>
+        </div>
+    </header>
+    <section class="container" style="margin-top: -20px">
+        <div class="panel">
+            <div class="panel-body">
+                <article class="guide">
+                    <h2>Compile a project</h2>
+                    <div>
+                        <p>
+                            1) <a href="https://github.com/SweeneyThreads/Actorbase">Download</a> the code projet from GitHub.
+                            <br />
+                            2) <a href="http://www.scala-sbt.org/download.html">Download</a>and install SBT.
+                            <br />
+                            3) Open the terminal and go to the project directory.
+                            <br />
+                            4) Write and enter: <code>sbt compile</code>
+                            <br />
+                            5) Write and enter: <code>sbt run</code>
+                        </p>
+                    </div>
+                </article>
+                <article class="guide">
+                    <h2>Use the JVM driver</h2>
+                    <div>
+                        <p><a href="../downloads">Download</a> the library and import it into your project.</p>
+                        <p>
+                            Create a new connection:<br />
+                            <code>val connection = Driver.connect("address", port, "username", "password")</code>
+                        </p>
+                        <p>
+                            Execute a query:<br />
+                            <code>connection.executeQuery("Query")</code>
+                        </p>
+                        <p>
+                            Close the connection:<br />
+                            <code>connection.closeConnection()</code>
+                        </p>
+                    </div>
+                </article>
+                <article class="guide">
+                    <h2>Talk to the database</h2>
+                    <div>
+                        <p>
+                            The Actorbase server uses a <strong>custom protocol</strong> for incoming requests:
+                            <br />
+                            <table class="table table-striped">
+                                <tbody>
+                                    <tr>
+                                        <td><strong>N. bytes</strong></td>
+                                        <td>1</td>
+                                        <td>1</td>
+                                        <td>4</td>
+                                        <td>1</td>
+                                        <td>var</td>
+                                        <td>1</td>
+                                        <td>1</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Value</strong></td>
+                                        <td>0</td>
+                                        <td>1</td>
+                                        <td>Query length</td>
+                                        <td>Operation code</td>
+                                        <td>Query</td>
+                                        <td>0</td>
+                                        <td>2</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            If you want to build your own driver connector you <strong>have to</strong> follow this exact
+                            sequence of bytes.
+                        </p>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+    <footer>
+    </footer>
+</body>
+
+</html>
