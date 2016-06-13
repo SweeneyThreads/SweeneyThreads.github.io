@@ -62,7 +62,7 @@
                 <ul class="nav navbar-nav navbar-right">
                     <li><a href="../">What is it</a></li>
                     <li><a href="../downloads">Download</a></li>
-                    <li><a href="https://www.gitbook.com/book/sweeneythreads/actorbase-user-s-manual/details">Guide</a></li>
+                    <li><a href="https://sweeneythreads.gitbooks.io/actorbase-user-s-manual/content/">Guide</a></li>
                     <li><a href="../docs/">Docs</a></li>
                     <li class="active"><a href="#">Developer</a></li>
                     <li><a href="https://github.com/SweeneyThreads/Actorbase">Source</a></li>
@@ -83,19 +83,24 @@
     <section class="container" style="margin-top: -20px">
         <div class="panel">
             <div class="panel-body">
+                <div class="alert alert-dismissible alert-warning">
+                    <button type="button" class="close" data-dismiss="alert">×</button>
+                    <h4>Note</h4>
+                    <p>
+                        If you haven't done it yet, please read the 
+                        <a href="https://sweeneythreads.gitbooks.io/actorbase-user-s-manual/content/" 
+                        class="alert-link">user's manual</a> first.
+                    </p>
+                </div>
                 <article class="guide">
                     <h2>Compile a project</h2>
                     <div>
                         <p>
                             1) <a href="https://github.com/SweeneyThreads/Actorbase">Download</a> the code projet from GitHub.
-                            <br />
-                            2) <a href="http://www.scala-sbt.org/download.html">Download</a>and install SBT.
-                            <br />
-                            3) Open the terminal and go to the project directory.
-                            <br />
-                            4) Write and enter: <code>sbt compile</code>
-                            <br />
-                            5) Write and enter: <code>sbt run</code>
+                            <br /> 2) <a href="http://www.scala-sbt.org/download.html">Download</a>and install SBT.
+                            <br /> 3) Open the terminal and go to the project directory.
+                            <br /> 4) Write and enter: <code>sbt compile</code>
+                            <br /> 5) Write and enter: <code>sbt run</code>
                         </p>
                     </div>
                 </article>
@@ -121,6 +126,7 @@
                     <h2>Talk to the database</h2>
                     <div>
                         <p>
+                            <h3>The protocol</h3>
                             The Actorbase server uses a <strong>custom protocol</strong> for incoming requests:
                             <br />
                             <table class="table table-striped">
@@ -149,6 +155,15 @@
                             </table>
                             If you want to build your own driver connector you <strong>have to</strong> follow this exact
                             sequence of bytes.
+                        </p>
+                        <p>
+                            <h3>Connection</h3>
+                            In order to connect you have to send <code>login username password</code> to the server. It will
+                            reply with a <code>Y</code> if the login is successful or <code>N</code> otherwise.
+                        </p>
+                        <p>
+                            <h3>Send a query</h3>
+                            To query the database you only have to send the string coded in UTF-8. It will reply with the reply string coded in UTF-8.
                         </p>
                     </div>
                 </article>
