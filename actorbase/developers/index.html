@@ -93,11 +93,18 @@
                     </p>
                 </div>
                 <article class="guide">
-                    <h2>Compile a project</h2>
+                    <h2>Compile the project</h2>
                     <div>
+                    	<p>
+                        	<strong>Actorbase</strong> is a project developed using the Scala programmig language, that uses SBT to manage the building process. 
+                        	The easiest way to start developing with <strong>Actorbase</strong> is to import the project folder into an IDE (Integrated development environment) that supports SBT (like JetBrains Intellij or Eclipse).
+                        </p>
+                        <p>
+                        	If you want to manually build the project from the command line, these are the steps to do: <br />
+                    	</p>
                         <p>
                             1) <a href="https://github.com/SweeneyThreads/Actorbase">Download</a> the code projet from GitHub.
-                            <br /> 2) <a href="http://www.scala-sbt.org/download.html">Download</a>and install SBT.
+                            <br /> 2) <a href="http://www.scala-sbt.org/download.html">Download</a> and install SBT.
                             <br /> 3) Open the terminal and go to the project directory.
                             <br /> 4) Write and enter: <code>sbt compile</code>
                             <br /> 5) Write and enter: <code>sbt run</code>
@@ -107,7 +114,8 @@
                 <article class="guide">
                     <h2>Use the JVM driver</h2>
                     <div>
-                        <p><a href="../downloads">Download</a> the library and import it into your project.</p>
+                        <p><a href="../downloads">Download</a> the driver library and import it into your project.</p>
+                        <p>The steps to interact with an <strong>Actorbase server</strong> are the following:</p>
                         <p>
                             Create a new connection:<br />
                             <code>val connection = Driver.connect("address", port, "username", "password")</code>
@@ -123,11 +131,11 @@
                     </div>
                 </article>
                 <article class="guide">
-                    <h2>Talk to the database</h2>
+                    <h2>Talk to the database server</h2>
                     <div>
                         <p>
                             <h3>The protocol</h3>
-                            The Actorbase server uses a <strong>custom protocol</strong> for incoming requests:
+                            <p>The Actorbase server uses a <strong>custom protocol</strong> for incoming requests:</p>
                             <br />
                             <table class="table table-striped">
                                 <tbody>
