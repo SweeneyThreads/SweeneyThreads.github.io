@@ -39,7 +39,7 @@
       </span>
       </h4>
       
-          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>Created by matteobortolazzo on 02/05/2016.
+          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>ErrorMessages are used to manage invalid operations and errors.
 </p></div><div class="toggleContainer block">
           <span class="toggle">Linear Supertypes</span>
           <div class="superTypes hiddenContent"><span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
@@ -94,7 +94,7 @@
         <a href="ErrorMessages$$ErrorMessage.html"><span class="name">ErrorMessage</span></a><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
       </span>
       </h4>
-      
+      <p class="comment cmt">Trait that every message which belongs to error operations has to extend.</p>
     </li><li name="server.messages.query.ErrorMessages.InvalidQueryMessage" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="InvalidQueryMessageextendsQueryMessagewithErrorMessages.ErrorMessagewithProductwithSerializable"></a>
       <a id="InvalidQueryMessage:InvalidQueryMessage"></a>
@@ -107,9 +107,9 @@
         <a href="ErrorMessages$$InvalidQueryMessage.html"><span class="name">InvalidQueryMessage</span></a><span class="params">()</span><span class="result"> extends <a href="QueryMessage.html" class="extype" name="server.messages.query.QueryMessage">QueryMessage</a> with <a href="ErrorMessages$$ErrorMessage.html" class="extype" name="server.messages.query.ErrorMessages.ErrorMessage">ErrorMessage</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       </h4>
-      
+      <p class="comment cmt">An InvalidQueryMessage is used to inform that a requested query is not valid.</p>
     </li><li name="server.messages.query.ErrorMessages.QueryErrorInfo" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="QueryErrorInfoextendsReplyInfowithProductwithSerializable"></a>
+      <a id="QueryErrorInfoextendsReplyInfowithErrorMessages.ErrorMessagewithProductwithSerializable"></a>
       <a id="QueryErrorInfo:QueryErrorInfo"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -117,10 +117,10 @@
         <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <a href="ErrorMessages$$QueryErrorInfo.html"><span class="name">QueryErrorInfo</span></a><span class="params">()</span><span class="result"> extends <a href="ReplyInfo.html" class="extype" name="server.messages.query.ReplyInfo">ReplyInfo</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+        <a href="ErrorMessages$$QueryErrorInfo.html"><span class="name">QueryErrorInfo</span></a><span class="params">()</span><span class="result"> extends <a href="ReplyInfo.html" class="extype" name="server.messages.query.ReplyInfo">ReplyInfo</a> with <a href="ErrorMessages$$ErrorMessage.html" class="extype" name="server.messages.query.ErrorMessages.ErrorMessage">ErrorMessage</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       </h4>
-      
+      <p class="comment cmt">A QueryErrorInfo is used as response to an operation which has not been executed correctly.</p>
     </li></ol>
             </div>
 

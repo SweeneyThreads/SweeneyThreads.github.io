@@ -39,7 +39,7 @@
       </span>
       </h4>
       
-          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>Created by matteobortolazzo on 02/05/2016.
+          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>MapMessages are used to manage operations on maps.
 </p></div><div class="toggleContainer block">
           <span class="toggle">Linear Supertypes</span>
           <div class="superTypes hiddenContent"><span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
@@ -94,7 +94,7 @@
         <a href="MapMessages$$CreateMapMessage.html"><span class="name">CreateMapMessage</span></a><span class="params">(<span name="name">name: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result"> extends <a href="MapMessages$$MapMessage.html" class="extype" name="server.messages.query.user.MapMessages.MapMessage">MapMessage</a> with <a href="../PermissionMessages$$ReadWriteMessage.html" class="extype" name="server.messages.query.PermissionMessages.ReadWriteMessage">ReadWriteMessage</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       </h4>
-      
+      <p class="comment cmt">A CreateMapMessage is used to request the creation of a map with the given name.</p>
     </li><li name="server.messages.query.user.MapMessages.DeleteMapMessage" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="DeleteMapMessageextendsMapMessages.MapMessagewithPermissionMessages.ReadWriteMessagewithProductwithSerializable"></a>
       <a id="DeleteMapMessage:DeleteMapMessage"></a>
@@ -107,7 +107,7 @@
         <a href="MapMessages$$DeleteMapMessage.html"><span class="name">DeleteMapMessage</span></a><span class="params">(<span name="name">name: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result"> extends <a href="MapMessages$$MapMessage.html" class="extype" name="server.messages.query.user.MapMessages.MapMessage">MapMessage</a> with <a href="../PermissionMessages$$ReadWriteMessage.html" class="extype" name="server.messages.query.PermissionMessages.ReadWriteMessage">ReadWriteMessage</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       </h4>
-      
+      <p class="comment cmt">A DeleteMapMessage is used to request the deletion of the map with the given name.</p>
     </li><li name="server.messages.query.user.MapMessages.ListMapInfo" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="ListMapInfoextendsReplyInfowithProductwithSerializable"></a>
       <a id="ListMapInfo:ListMapInfo"></a>
@@ -120,7 +120,7 @@
         <a href="MapMessages$$ListMapInfo.html"><span class="name">ListMapInfo</span></a><span class="params">(<span name="maps">maps: <span class="extype" name="scala.List">List</span>[<span class="extype" name="scala.Predef.String">String</span>]</span>)</span><span class="result"> extends <a href="../ReplyInfo.html" class="extype" name="server.messages.query.ReplyInfo">ReplyInfo</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       </h4>
-      
+      <p class="comment cmt">A ListMapInfo is used as response to a list map request.</p>
     </li><li name="server.messages.query.user.MapMessages.ListMapMessage" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="ListMapMessageextendsMapMessages.MapMessagewithPermissionMessages.ReadMessagewithProductwithSerializable"></a>
       <a id="ListMapMessage:ListMapMessage"></a>
@@ -133,7 +133,7 @@
         <a href="MapMessages$$ListMapMessage.html"><span class="name">ListMapMessage</span></a><span class="params">()</span><span class="result"> extends <a href="MapMessages$$MapMessage.html" class="extype" name="server.messages.query.user.MapMessages.MapMessage">MapMessage</a> with <a href="../PermissionMessages$$ReadMessage.html" class="extype" name="server.messages.query.PermissionMessages.ReadMessage">ReadMessage</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       </h4>
-      
+      <p class="comment cmt">A ListMapMessage is used to request the list of maps that compose the selected database.</p>
     </li><li name="server.messages.query.user.MapMessages.MapAlreadyExistInfo" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="MapAlreadyExistInfoextendsReplyInfowithProductwithSerializable"></a>
       <a id="MapAlreadyExistInfo:MapAlreadyExistInfo"></a>
@@ -146,7 +146,8 @@
         <a href="MapMessages$$MapAlreadyExistInfo.html"><span class="name">MapAlreadyExistInfo</span></a><span class="params">()</span><span class="result"> extends <a href="../ReplyInfo.html" class="extype" name="server.messages.query.ReplyInfo">ReplyInfo</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       </h4>
-      
+      <p class="comment cmt">A MapAlreadyExistInfo is used as response to a create map request, if the map requested for creation already
+exist.</p>
     </li><li name="server.messages.query.user.MapMessages.MapDoesNotExistInfo" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="MapDoesNotExistInfoextendsReplyInfowithProductwithSerializable"></a>
       <a id="MapDoesNotExistInfo:MapDoesNotExistInfo"></a>
@@ -159,7 +160,7 @@
         <a href="MapMessages$$MapDoesNotExistInfo.html"><span class="name">MapDoesNotExistInfo</span></a><span class="params">()</span><span class="result"> extends <a href="../ReplyInfo.html" class="extype" name="server.messages.query.ReplyInfo">ReplyInfo</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       </h4>
-      
+      <p class="comment cmt">A MapDoesNotExistInfo is used as response to a map request, if the map requested does not exist.</p>
     </li><li name="server.messages.query.user.MapMessages.MapMessage" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
       <a id="MapMessageextendsUserMessage"></a>
       <a id="MapMessage:MapMessage"></a>
@@ -172,7 +173,7 @@
         <a href="MapMessages$$MapMessage.html"><span class="name">MapMessage</span></a><span class="result"> extends <a href="UserMessage.html" class="extype" name="server.messages.query.user.UserMessage">UserMessage</a></span>
       </span>
       </h4>
-      
+      <p class="comment cmt">Trait that every message which belongs to maps operations has to extend.</p>
     </li><li name="server.messages.query.user.MapMessages.NoMapInfo" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="NoMapInfoextendsReplyInfowithProductwithSerializable"></a>
       <a id="NoMapInfo:NoMapInfo"></a>
@@ -185,7 +186,7 @@
         <a href="MapMessages$$NoMapInfo.html"><span class="name">NoMapInfo</span></a><span class="params">()</span><span class="result"> extends <a href="../ReplyInfo.html" class="extype" name="server.messages.query.ReplyInfo">ReplyInfo</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       </h4>
-      
+      <p class="comment cmt">A NoMapInfo is used as response to a list map request if no maps are present on the selected database.</p>
     </li><li name="server.messages.query.user.MapMessages.NoMapSelectedInfo" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="NoMapSelectedInfoextendsReplyInfowithProductwithSerializable"></a>
       <a id="NoMapSelectedInfo:NoMapSelectedInfo"></a>
@@ -198,7 +199,7 @@
         <a href="MapMessages$$NoMapSelectedInfo.html"><span class="name">NoMapSelectedInfo</span></a><span class="params">()</span><span class="result"> extends <a href="../ReplyInfo.html" class="extype" name="server.messages.query.ReplyInfo">ReplyInfo</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       </h4>
-      
+      <p class="comment cmt">A NoMapSelectedInfo is used as response to a request on a row when no map has previously been selected.</p>
     </li><li name="server.messages.query.user.MapMessages.SelectMapMessage" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="SelectMapMessageextendsMapMessages.MapMessagewithPermissionMessages.ReadMessagewithProductwithSerializable"></a>
       <a id="SelectMapMessage:SelectMapMessage"></a>
@@ -211,7 +212,7 @@
         <a href="MapMessages$$SelectMapMessage.html"><span class="name">SelectMapMessage</span></a><span class="params">(<span name="name">name: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result"> extends <a href="MapMessages$$MapMessage.html" class="extype" name="server.messages.query.user.MapMessages.MapMessage">MapMessage</a> with <a href="../PermissionMessages$$ReadMessage.html" class="extype" name="server.messages.query.PermissionMessages.ReadMessage">ReadMessage</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       </h4>
-      
+      <p class="comment cmt">A SelectMapMessage is used to request the select of the map with the given name.</p>
     </li></ol>
             </div>
 

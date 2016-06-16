@@ -39,15 +39,14 @@
       </span>
       </h4>
       
-          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>Created by matteobortolazzo on 01/05/2016.
-Actor that executes the messages from the client.
+          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>Actor that executes the messages from the client.
 It processes database-level queries and admin-level queries by itself,
 all other queries are sent to the right actor.
 It's the only actor that interacts with the Usermanger actor, every reply it's sent to it.
 </p></div><dl class="attributes block"> <dt>See also</dt><dd><span class="cmt"><p>Server
 </p></span><span class="cmt"><p>UserPermission</p></span></dd></dl><div class="toggleContainer block">
           <span class="toggle">Linear Supertypes</span>
-          <div class="superTypes hiddenContent"><a href="ReplyActor.html" class="extype" name="server.actors.ReplyActor">ReplyActor</a>, <span class="extype" name="akka.actor.ActorLogging">ActorLogging</span>, <span class="extype" name="akka.actor.Actor">Actor</span>, <span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
+          <div class="superTypes hiddenContent"><a href="ReplyActor.html" class="extype" name="server.actors.ReplyActor">ReplyActor</a>, <span class="extype" name="akka.actor.ActorLogging">ActorLogging</span>, <a href="ClusterAwareActor.html" class="extype" name="server.actors.ClusterAwareActor">ClusterAwareActor</a>, <span class="extype" name="akka.actor.Actor">Actor</span>, <span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
         </div></div>
         
 
@@ -65,7 +64,7 @@ It's the only actor that interacts with the Usermanger actor, every reply it's s
                 <span class="filtertype">Inherited<br />
                 </span>
                 <ol id="linearization">
-                  <li class="in" name="server.actors.Main"><span>Main</span></li><li class="in" name="server.actors.ReplyActor"><span>ReplyActor</span></li><li class="in" name="akka.actor.ActorLogging"><span>ActorLogging</span></li><li class="in" name="akka.actor.Actor"><span>Actor</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
+                  <li class="in" name="server.actors.Main"><span>Main</span></li><li class="in" name="server.actors.ReplyActor"><span>ReplyActor</span></li><li class="in" name="akka.actor.ActorLogging"><span>ActorLogging</span></li><li class="in" name="server.actors.ClusterAwareActor"><span>ClusterAwareActor</span></li><li class="in" name="akka.actor.Actor"><span>Actor</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
                 </ol>
               </div><div id="ancestors">
             <span class="filtertype"></span>
@@ -85,8 +84,8 @@ It's the only actor that interacts with the Usermanger actor, every reply it's s
         <div id="allMembers">
         <div id="constructors" class="members">
               <h3>Instance Constructors</h3>
-              <ol><li name="server.actors.Main#&lt;init&gt;" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="&lt;init&gt;(permissions:java.util.concurrent.ConcurrentHashMap[String,server.enums.EnumPermission.UserPermission],server:server.utils.ServerDependencyInjector):server.actors.Main"></a>
+              <ol><li name="server.actors.Main#&lt;init&gt;" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="&lt;init&gt;(perms:java.util.HashMap[String,server.enums.EnumPermission.UserPermission]):server.actors.Main"></a>
       <a id="&lt;init&gt;:Main"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -94,11 +93,10 @@ It's the only actor that interacts with the Usermanger actor, every reply it's s
         <span class="kind">new</span>
       </span>
       <span class="symbol">
-        <span class="name">Main</span><span class="params">(<span name="permissions">permissions: <span class="extype" name="java.util.concurrent.ConcurrentHashMap">ConcurrentHashMap</span>[<span class="extype" name="scala.Predef.String">String</span>, <a href="../enums/EnumPermission$$UserPermission.html" class="extype" name="server.enums.EnumPermission.UserPermission">UserPermission</a>] = <span class="symbol">null</span></span>, <span name="server">server: <a href="../utils/ServerDependencyInjector.html" class="extype" name="server.utils.ServerDependencyInjector">ServerDependencyInjector</a> = <span class="defval" name="{<br/>&amp;nbsp;&amp;nbsp;  final class $anon extends AnyRef with server.utils.StandardServerInjector {<br/>&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;    def &lt;init&gt;(): anonymous class $anon = {<br/>&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;      $anon.super.&lt;init&gt;();<br/>&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;      ()<br/>&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;    }<br/>&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;  };<br/>&amp;nbsp;&amp;nbsp;  new $anon()<br/>&amp;nbsp;&amp;nbsp;}">...</span></span>)</span>
+        <span class="name">Main</span><span class="params">(<span name="perms">perms: <span class="extype" name="java.util.HashMap">HashMap</span>[<span class="extype" name="scala.Predef.String">String</span>, <a href="../enums/EnumPermission$$UserPermission.html" class="extype" name="server.enums.EnumPermission.UserPermission">UserPermission</a>] = <span class="symbol">null</span></span>)</span>
       </span>
       </h4>
-      <p class="shortcomment cmt"></p><div class="fullcomment"><div class="comment cmt"></div><dl class="paramcmts block"><dt class="param">permissions</dt><dd class="cmt"><p>the user's permissions list.</p></dd><dt class="param">server</dt><dd class="cmt"><p>the server reference
-</p></dd></dl></div>
+      <p class="shortcomment cmt">Create a new Main actor instance from a ConcurrentHashMap and a ServerDependencyInjector.</p>
     </li></ol>
             </div>
 
@@ -286,6 +284,19 @@ It's the only actor that interacts with the Usermanger actor, every reply it's s
     </span>)</span>
               
         </dd></dl></div>
+    </li><li name="server.actors.ClusterAwareActor#clusterListener" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="clusterListener:akka.actor.ActorRef"></a>
+      <a id="clusterListener:ActorRef"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">var</span>
+      </span>
+      <span class="symbol">
+        <span class="name">clusterListener</span><span class="result">: <span class="extype" name="akka.actor.ActorRef">ActorRef</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="ClusterAwareActor.html" class="extype" name="server.actors.ClusterAwareActor">ClusterAwareActor</a></dd></dl></div>
     </li><li name="akka.actor.Actor#context" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="context:akka.actor.ActorContext"></a>
       <a id="context:ActorContext"></a>
@@ -313,7 +324,7 @@ It's the only actor that interacts with the Usermanger actor, every reply it's s
       </h4>
       <p class="shortcomment cmt">Return the name of the current running method.</p><div class="fullcomment"><div class="comment cmt"><p>Return the name of the current running method.</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>The name of the method that call this.
 </p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="ReplyActor.html" class="extype" name="server.actors.ReplyActor">ReplyActor</a></dd></dl></div>
-    </li><li name="server.actors.Main#ec" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+    </li><li name="server.actors.ClusterAwareActor#ec" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="ec:scala.concurrent.ExecutionContextExecutor"></a>
       <a id="ec:ExecutionContextExecutor"></a>
       <h4 class="signature">
@@ -325,7 +336,7 @@ It's the only actor that interacts with the Usermanger actor, every reply it's s
         <span class="name">ec</span><span class="result">: <span class="extype" name="scala.concurrent.ExecutionContextExecutor">ExecutionContextExecutor</span></span>
       </span>
       </h4>
-      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="ClusterAwareActor.html" class="extype" name="server.actors.ClusterAwareActor">ClusterAwareActor</a></dd></dl></div>
     </li><li name="scala.AnyRef#eq" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="eq(x$1:AnyRef):Boolean"></a>
       <a id="eq(AnyRef):Boolean"></a>
@@ -465,6 +476,23 @@ It's the only actor that interacts with the Usermanger actor, every reply it's s
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="server.actors.ClusterAwareActor#nextAddress" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="nextAddress:akka.actor.Address"></a>
+      <a id="nextAddress:Address"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">nextAddress</span><span class="result">: <span class="extype" name="akka.actor.Address">Address</span></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Returns an address of one node in the cluster.</p><div class="fullcomment"><div class="comment cmt"><p>Returns an address of one node in the cluster.
+This method sends a message to the ClusterListener of the same node of this actor
+so it will stop the thread of this actor while waiting for a response.
+</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>the address of type akka.actor.Address.
+</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="ClusterAwareActor.html" class="extype" name="server.actors.ClusterAwareActor">ClusterAwareActor</a></dd></dl></div>
     </li><li name="scala.AnyRef#notify" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="notify():Unit"></a>
       <a id="notify():Unit"></a>
@@ -580,7 +608,7 @@ It's the only actor that interacts with the Usermanger actor, every reply it's s
       </span>
       </h4>
       <p class="shortcomment cmt">Processes all incoming messages.</p><div class="fullcomment"><div class="comment cmt"><p>Processes all incoming messages.
-It handles only QueryMessage messages
+It handles only QueryMessage messages.
 </p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="server.actors.Main">Main</a> → Actor</dd><dt>See also</dt><dd><span class="cmt"><p>#handleQueryMessage(QueryMessage)
 </p></span><span class="cmt"><p>QueryMessage</p></span></dd></dl></div>
     </li><li name="server.actors.ReplyActor#reply" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
@@ -663,20 +691,6 @@ It handles only QueryMessage messages
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Actor</dd></dl></div>
-    </li><li name="server.actors.Main#server" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="server:server.utils.ServerDependencyInjector"></a>
-      <a id="server:ServerDependencyInjector"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">val</span>
-      </span>
-      <span class="symbol">
-        <span class="name">server</span><span class="result">: <a href="../utils/ServerDependencyInjector.html" class="extype" name="server.utils.ServerDependencyInjector">ServerDependencyInjector</a></span>
-      </span>
-      </h4>
-      <p class="shortcomment cmt">the server reference
-</p>
     </li><li name="akka.actor.Actor#supervisorStrategy" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="supervisorStrategy:akka.actor.SupervisorStrategy"></a>
       <a id="supervisorStrategy:SupervisorStrategy"></a>
@@ -703,7 +717,7 @@ It handles only QueryMessage messages
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
-    </li><li name="server.actors.Main#timeout" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+    </li><li name="server.actors.ClusterAwareActor#timeout" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="timeout:akka.util.Timeout"></a>
       <a id="timeout:Timeout"></a>
       <h4 class="signature">
@@ -715,7 +729,7 @@ It handles only QueryMessage messages
         <span class="name">timeout</span><span class="result">: <span class="extype" name="akka.util.Timeout">Timeout</span></span>
       </span>
       </h4>
-      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="ClusterAwareActor.html" class="extype" name="server.actors.ClusterAwareActor">ClusterAwareActor</a></dd></dl></div>
     </li><li name="scala.AnyRef#toString" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="toString():String"></a>
       <a id="toString():String"></a>
@@ -828,6 +842,8 @@ It handles only QueryMessage messages
               <h3>Inherited from <a href="ReplyActor.html" class="extype" name="server.actors.ReplyActor">ReplyActor</a></h3>
             </div><div class="parent" name="akka.actor.ActorLogging">
               <h3>Inherited from <span class="extype" name="akka.actor.ActorLogging">ActorLogging</span></h3>
+            </div><div class="parent" name="server.actors.ClusterAwareActor">
+              <h3>Inherited from <a href="ClusterAwareActor.html" class="extype" name="server.actors.ClusterAwareActor">ClusterAwareActor</a></h3>
             </div><div class="parent" name="akka.actor.Actor">
               <h3>Inherited from <span class="extype" name="akka.actor.Actor">Actor</span></h3>
             </div><div class="parent" name="scala.AnyRef">

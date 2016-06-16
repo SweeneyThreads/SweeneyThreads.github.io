@@ -70,7 +70,7 @@
         <a href="LoginMessage.html"><span class="name">LoginMessage</span></a><span class="params">(<span name="username">username: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="password">password: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result"> extends <a href="QueryMessage.html" class="extype" name="server.messages.query.QueryMessage">QueryMessage</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       </h4>
-      <p class="comment cmt">Created by matteobortolazzo on 04/05/2016.</p>
+      <p class="comment cmt">A LoginMessage is used to request a login operation.</p>
     </li><li name="server.messages.query.QueryMessage" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
       <a id="QueryMessageextendsAnyRef"></a>
       <a id="QueryMessage:QueryMessage"></a>
@@ -83,7 +83,20 @@
         <a href="QueryMessage.html"><span class="name">QueryMessage</span></a><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
       </span>
       </h4>
-      <p class="comment cmt">Created by lucan on 10/05/2016.</p>
+      <p class="comment cmt">Trait that every message that belongs to query operations has to extend.</p>
+    </li><li name="server.messages.query.ReplyErrorInfo" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="ReplyErrorInfoextendsReplyInfowithProductwithSerializable"></a>
+      <a id="ReplyErrorInfo:ReplyErrorInfo"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="ReplyErrorInfo.html"><span class="name">ReplyErrorInfo</span></a><span class="params">()</span><span class="result"> extends <a href="ReplyInfo.html" class="extype" name="server.messages.query.ReplyInfo">ReplyInfo</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4>
+      
     </li><li name="server.messages.query.ReplyInfo" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
       <a id="ReplyInfoextendsAnyRef"></a>
       <a id="ReplyInfo:ReplyInfo"></a>
@@ -96,7 +109,7 @@
         <a href="ReplyInfo.html"><span class="name">ReplyInfo</span></a><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
       </span>
       </h4>
-      <p class="comment cmt">Created by matteobortolazzo on 13/05/2016.</p>
+      <p class="comment cmt">Trait that every message that is used as response info  has to extend.</p>
     </li><li name="server.messages.query.ReplyMessage" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="ReplyMessageextendsProductwithSerializable"></a>
       <a id="ReplyMessage:ReplyMessage"></a>
@@ -107,6 +120,19 @@
       </span>
       <span class="symbol">
         <a href="ReplyMessage.html"><span class="name">ReplyMessage</span></a><span class="params">(<span name="result">result: <a href="../../enums/EnumReplyResult$$ReplyResult.html" class="extype" name="server.enums.EnumReplyResult.ReplyResult">ReplyResult</a></span>, <span name="question">question: <a href="QueryMessage.html" class="extype" name="server.messages.query.QueryMessage">QueryMessage</a></span>, <span name="info">info: <a href="ReplyInfo.html" class="extype" name="server.messages.query.ReplyInfo">ReplyInfo</a> = <span class="symbol">null</span></span>)</span><span class="result"> extends <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4>
+      <p class="comment cmt">A ReplyMessage is used as response to an operation request.</p>
+    </li><li name="server.messages.query.ServiceErrorInfo" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="ServiceErrorInfoextendsReplyInfowithProductwithSerializable"></a>
+      <a id="ServiceErrorInfo:ServiceErrorInfo"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="ServiceErrorInfo.html"><span class="name">ServiceErrorInfo</span></a><span class="params">(<span name="error">error: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result"> extends <a href="ReplyInfo.html" class="extype" name="server.messages.query.ReplyInfo">ReplyInfo</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       </h4>
       
@@ -129,20 +155,7 @@
         <a href="ErrorMessages$.html"><span class="name">ErrorMessages</span></a>
       </span>
       </h4>
-      <p class="comment cmt">Created by matteobortolazzo on 02/05/2016.</p>
-    </li><li name="server.messages.query.HelpMessages" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="HelpMessages"></a>
-      <a id="HelpMessages:HelpMessages"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">object</span>
-      </span>
-      <span class="symbol">
-        <a href="HelpMessages$.html"><span class="name">HelpMessages</span></a>
-      </span>
-      </h4>
-      <p class="comment cmt">Created by DavideTommasin on 11/05/16.</p>
+      <p class="comment cmt">ErrorMessages are used to manage invalid operations and errors.</p>
     </li><li name="server.messages.query.PermissionMessages" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="PermissionMessages"></a>
       <a id="PermissionMessages:PermissionMessages"></a>
@@ -155,7 +168,7 @@
         <a href="PermissionMessages$.html"><span class="name">PermissionMessages</span></a>
       </span>
       </h4>
-      <p class="comment cmt">Created by matteobortolazzo on 04/05/2016.</p>
+      <p class="comment cmt">PermissionMessages are used to express permissions level requests.</p>
     </li><li name="server.messages.query.admin" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="admin"></a>
       <a id="admin:admin"></a>

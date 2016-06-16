@@ -39,7 +39,10 @@
       </span>
       </h4>
       
-          <div id="comment" class="fullcommenttop"><div class="toggleContainer block">
+          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>A DeleteDatabaseMessage is used to request the deletion of the database with the given name. An user needs Write
+permission to request this operation, therefore this message extends ReadWriteMessage.</p></div><dl class="paramcmts block"><dt class="param">name</dt><dd class="cmt"><p>The database name
+</p></dd></dl><dl class="attributes block"> <dt>See also</dt><dd><span class="cmt"><p>ReadWriteMessage
+</p></span><span class="cmt"><p>DatabaseMessage</p></span></dd></dl><div class="toggleContainer block">
           <span class="toggle">Linear Supertypes</span>
           <div class="superTypes hiddenContent"><span class="extype" name="scala.Serializable">Serializable</span>, <span class="extype" name="java.io.Serializable">Serializable</span>, <span class="extype" name="scala.Product">Product</span>, <span class="extype" name="scala.Equals">Equals</span>, <a href="../PermissionMessages$$ReadWriteMessage.html" class="extype" name="server.messages.query.PermissionMessages.ReadWriteMessage">ReadWriteMessage</a>, <a href="../PermissionMessages$$ReadMessage.html" class="extype" name="server.messages.query.PermissionMessages.ReadMessage">ReadMessage</a>, <a href="../PermissionMessages$$NoPermissionMessage.html" class="extype" name="server.messages.query.PermissionMessages.NoPermissionMessage">NoPermissionMessage</a>, <a href="DatabaseMessages$$DatabaseMessage.html" class="extype" name="server.messages.query.user.DatabaseMessages.DatabaseMessage">DatabaseMessage</a>, <a href="UserMessage.html" class="extype" name="server.messages.query.user.UserMessage">UserMessage</a>, <a href="../QueryMessage.html" class="extype" name="server.messages.query.QueryMessage">QueryMessage</a>, <span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
         </div></div>
@@ -79,7 +82,7 @@
         <div id="allMembers">
         <div id="constructors" class="members">
               <h3>Instance Constructors</h3>
-              <ol><li name="server.messages.query.user.DatabaseMessages.DeleteDatabaseMessage#&lt;init&gt;" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+              <ol><li name="server.messages.query.user.DatabaseMessages.DeleteDatabaseMessage#&lt;init&gt;" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="&lt;init&gt;(name:String):server.messages.query.user.DatabaseMessages.DeleteDatabaseMessage"></a>
       <a id="&lt;init&gt;:DeleteDatabaseMessage"></a>
       <h4 class="signature">
@@ -91,7 +94,8 @@
         <span class="name">DeleteDatabaseMessage</span><span class="params">(<span name="name">name: <span class="extype" name="scala.Predef.String">String</span></span>)</span>
       </span>
       </h4>
-      
+      <p class="shortcomment cmt"></p><div class="fullcomment"><div class="comment cmt"></div><dl class="paramcmts block"><dt class="param">name</dt><dd class="cmt"><p>The database name
+</p></dd></dl></div>
     </li></ol>
             </div>
 
@@ -268,7 +272,8 @@
         <span class="name">name</span><span class="result">: <span class="extype" name="scala.Predef.String">String</span></span>
       </span>
       </h4>
-      
+      <p class="shortcomment cmt">The database name
+</p>
     </li><li name="scala.AnyRef#ne" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="ne(x$1:AnyRef):Boolean"></a>
       <a id="ne(AnyRef):Boolean"></a>

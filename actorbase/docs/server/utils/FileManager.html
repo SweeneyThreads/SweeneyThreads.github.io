@@ -24,7 +24,7 @@
         </head>
         <body class="type">
       <div id="definition">
-        <img src="../../lib/class_big.png" />
+        <img src="../../lib/trait_big.png" />
         <p id="owner"><a href="../package.html" class="extype" name="server">server</a>.<a href="package.html" class="extype" name="server.utils">utils</a></p>
         <h1>FileManager</h1>
       </div>
@@ -32,17 +32,19 @@
       <h4 id="signature" class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
-        <span class="kind">class</span>
+        <span class="kind">trait</span>
       </span>
       <span class="symbol">
         <span class="name">FileManager</span><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
       </span>
       </h4>
       
-          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>Created by matteobortolazzo on 09/05/2016.</p><p>Writes and reads from the filesystem.
-</p></div><div class="toggleContainer block">
+          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>Writes and reads from the filesystem.</p></div><div class="toggleContainer block">
           <span class="toggle">Linear Supertypes</span>
           <div class="superTypes hiddenContent"><span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
+        </div><div class="toggleContainer block">
+          <span class="toggle">Known Subclasses</span>
+          <div class="subClasses hiddenContent"><a href="fileManagerLibrary/SingleFileManager.html" class="extype" name="server.utils.fileManagerLibrary.SingleFileManager">SingleFileManager</a></div>
         </div></div>
         
 
@@ -78,31 +80,119 @@
 
       <div id="template">
         <div id="allMembers">
-        <div id="constructors" class="members">
-              <h3>Instance Constructors</h3>
-              <ol><li name="server.utils.FileManager#&lt;init&gt;" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="&lt;init&gt;(path:String):server.utils.FileManager"></a>
-      <a id="&lt;init&gt;:FileManager"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">new</span>
-      </span>
-      <span class="symbol">
-        <span class="name">FileManager</span><span class="params">(<span name="path">path: <span class="extype" name="scala.Predef.String">String</span></span>)</span>
-      </span>
-      </h4>
-      <p class="shortcomment cmt"></p><div class="fullcomment"><div class="comment cmt"></div><dl class="paramcmts block"><dt class="param">path</dt><dd class="cmt"><p>The folder path.
-</p></dd></dl></div>
-    </li></ol>
-            </div>
-
         
 
         
 
         <div id="values" class="values members">
-              <h3>Value Members</h3>
+              <h3>Abstract Value Members</h3>
+              <ol><li name="server.utils.FileManager#EraseMap" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="EraseMap():Unit"></a>
+      <a id="EraseMap():Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">EraseMap</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Erases the whole map.</p>
+    </li><li name="server.utils.FileManager#InsertEntry" visbl="pub" data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="InsertEntry(key:String,value:Array[Byte]):Unit"></a>
+      <a id="InsertEntry(String,Array[Byte]):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">InsertEntry</span><span class="params">(<span name="key">key: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="value">value: <span class="extype" name="scala.Array">Array</span>[<span class="extype" name="scala.Byte">Byte</span>]</span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Inserts an entry in the files
+</p><div class="fullcomment"><div class="comment cmt"><p>Inserts an entry in the files
+</p></div><dl class="paramcmts block"><dt class="param">key</dt><dd class="cmt"><p>The key of the entry.</p></dd><dt class="param">value</dt><dd class="cmt"><p>The value of the entry
+</p></dd></dl></div>
+    </li><li name="server.utils.FileManager#ReadMap" visbl="pub" data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="ReadMap():java.util.concurrent.ConcurrentHashMap[String,Array[Byte]]"></a>
+      <a id="ReadMap():ConcurrentHashMap[String,Array[Byte]]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">ReadMap</span><span class="params">()</span><span class="result">: <span class="extype" name="java.util.concurrent.ConcurrentHashMap">ConcurrentHashMap</span>[<span class="extype" name="scala.Predef.String">String</span>, <span class="extype" name="scala.Array">Array</span>[<span class="extype" name="scala.Byte">Byte</span>]]</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Reads an entire map.</p><div class="fullcomment"><div class="comment cmt"><p>Reads an entire map.
+</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>The map to read.
+</p></dd></dl></div>
+    </li><li name="server.utils.FileManager#RemoveEntry" visbl="pub" data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="RemoveEntry(key:String):Unit"></a>
+      <a id="RemoveEntry(String):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">RemoveEntry</span><span class="params">(<span name="key">key: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Removes the entry with the given key from the file.</p><div class="fullcomment"><div class="comment cmt"><p>Removes the entry with the given key from the file.
+</p></div><dl class="paramcmts block"><dt class="param">key</dt><dd class="cmt"><p>The key of the entry.
+</p></dd></dl></div>
+    </li><li name="server.utils.FileManager#UpdateEntry" visbl="pub" data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="UpdateEntry(key:String,value:Array[Byte]):Unit"></a>
+      <a id="UpdateEntry(String,Array[Byte]):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">UpdateEntry</span><span class="params">(<span name="key">key: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="value">value: <span class="extype" name="scala.Array">Array</span>[<span class="extype" name="scala.Byte">Byte</span>]</span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Updates the value of the entry with the given key in the file.</p><div class="fullcomment"><div class="comment cmt"><p>Updates the value of the entry with the given key in the file.
+</p></div><dl class="paramcmts block"><dt class="param">key</dt><dd class="cmt"><p>The key of the entry.</p></dd><dt class="param">value</dt><dd class="cmt"><p>The value of the entry
+</p></dd></dl></div>
+    </li><li name="server.utils.FileManager#WriteMap" visbl="pub" data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="WriteMap(map:java.util.HashMap[String,Array[Byte]]):Unit"></a>
+      <a id="WriteMap(HashMap[String,Array[Byte]]):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">WriteMap</span><span class="params">(<span name="map">map: <span class="extype" name="java.util.HashMap">HashMap</span>[<span class="extype" name="scala.Predef.String">String</span>, <span class="extype" name="scala.Array">Array</span>[<span class="extype" name="scala.Byte">Byte</span>]]</span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Writes an entire map in the file.</p><div class="fullcomment"><div class="comment cmt"><p>Writes an entire map in the file.
+</p></div><dl class="paramcmts block"><dt class="param">map</dt><dd class="cmt"><p>The map to write.
+</p></dd></dl></div>
+    </li><li name="server.utils.FileManager#removeStrategy" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="removeStrategy:server.utils.fileManagerLibrary.RemoveStrategy"></a>
+      <a id="removeStrategy:RemoveStrategy"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">removeStrategy</span><span class="result">: <a href="fileManagerLibrary/RemoveStrategy.html" class="extype" name="server.utils.fileManagerLibrary.RemoveStrategy">RemoveStrategy</a></span>
+      </span>
+      </h4>
+      
+    </li></ol>
+            </div>
+
+        <div id="values" class="values members">
+              <h3>Concrete Value Members</h3>
               <ol><li name="scala.AnyRef#!=" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="!=(x$1:AnyRef):Boolean"></a>
       <a id="!=(AnyRef):Boolean"></a>
@@ -168,82 +258,6 @@
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
-    </li><li name="server.utils.FileManager#InsertEntry" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="InsertEntry(key:String,value:Array[Byte]):Unit"></a>
-      <a id="InsertEntry(String,Array[Byte]):Unit"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">InsertEntry</span><span class="params">(<span name="key">key: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="value">value: <span class="extype" name="scala.Array">Array</span>[<span class="extype" name="scala.Byte">Byte</span>]</span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
-      </span>
-      </h4>
-      <p class="shortcomment cmt">Inserts an entry in the files
-</p><div class="fullcomment"><div class="comment cmt"><p>Inserts an entry in the files
-</p></div><dl class="paramcmts block"><dt class="param">key</dt><dd class="cmt"><p>The key of the entry.</p></dd><dt class="param">value</dt><dd class="cmt"><p>The value of the entry
-</p></dd></dl></div>
-    </li><li name="server.utils.FileManager#ReadMap" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="ReadMap():java.util.HashMap[String,Array[Byte]]"></a>
-      <a id="ReadMap():HashMap[String,Array[Byte]]"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">ReadMap</span><span class="params">()</span><span class="result">: <span class="extype" name="java.util.HashMap">HashMap</span>[<span class="extype" name="scala.Predef.String">String</span>, <span class="extype" name="scala.Array">Array</span>[<span class="extype" name="scala.Byte">Byte</span>]]</span>
-      </span>
-      </h4>
-      <p class="shortcomment cmt">Reads an entire map.</p><div class="fullcomment"><div class="comment cmt"><p>Reads an entire map.
-</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>The map to read.
-</p></dd></dl></div>
-    </li><li name="server.utils.FileManager#RemoveEntry" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="RemoveEntry(key:String):Unit"></a>
-      <a id="RemoveEntry(String):Unit"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">RemoveEntry</span><span class="params">(<span name="key">key: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
-      </span>
-      </h4>
-      <p class="shortcomment cmt">Removes the entry with the given key from the file.</p><div class="fullcomment"><div class="comment cmt"><p>Removes the entry with the given key from the file.
-</p></div><dl class="paramcmts block"><dt class="param">key</dt><dd class="cmt"><p>The key of the entry.
-</p></dd></dl></div>
-    </li><li name="server.utils.FileManager#UpdateEntry" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="UpdateEntry(key:String,value:Array[Byte]):Unit"></a>
-      <a id="UpdateEntry(String,Array[Byte]):Unit"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">UpdateEntry</span><span class="params">(<span name="key">key: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="value">value: <span class="extype" name="scala.Array">Array</span>[<span class="extype" name="scala.Byte">Byte</span>]</span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
-      </span>
-      </h4>
-      <p class="shortcomment cmt">Updates the value of the entry with the given key in the file.</p><div class="fullcomment"><div class="comment cmt"><p>Updates the value of the entry with the given key in the file.
-</p></div><dl class="paramcmts block"><dt class="param">key</dt><dd class="cmt"><p>The key of the entry.</p></dd><dt class="param">value</dt><dd class="cmt"><p>The value of the entry
-</p></dd></dl></div>
-    </li><li name="server.utils.FileManager#WriteMap" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="WriteMap(map:java.util.HashMap[String,Array[Byte]]):Unit"></a>
-      <a id="WriteMap(HashMap[String,Array[Byte]]):Unit"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">WriteMap</span><span class="params">(<span name="map">map: <span class="extype" name="java.util.HashMap">HashMap</span>[<span class="extype" name="scala.Predef.String">String</span>, <span class="extype" name="scala.Array">Array</span>[<span class="extype" name="scala.Byte">Byte</span>]]</span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
-      </span>
-      </h4>
-      <p class="shortcomment cmt">Writes an entire map in the file.</p><div class="fullcomment"><div class="comment cmt"><p>Writes an entire map in the file.
-</p></div><dl class="paramcmts block"><dt class="param">map</dt><dd class="cmt"><p>The map to write.
-</p></dd></dl></div>
     </li><li name="scala.Any#asInstanceOf" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="asInstanceOf[T0]:T0"></a>
       <a id="asInstanceOf[T0]:T0"></a>

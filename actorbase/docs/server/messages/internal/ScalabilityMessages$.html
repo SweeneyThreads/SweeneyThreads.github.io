@@ -39,7 +39,7 @@
       </span>
       </h4>
       
-          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>Created by borto on 31/05/2016.
+          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>ScalabilityMessages are used to manage the scaling properties of Actorbase.
 </p></div><div class="toggleContainer block">
           <span class="toggle">Linear Supertypes</span>
           <div class="superTypes hiddenContent"><span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
@@ -82,21 +82,60 @@
 
         <div id="types" class="types members">
               <h3>Type Members</h3>
-              <ol><li name="server.messages.internal.ScalabilityMessages.ReadMapMessage" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="ReadMapMessageextendsProductwithSerializable"></a>
-      <a id="ReadMapMessage:ReadMapMessage"></a>
+              <ol><li name="server.messages.internal.ScalabilityMessages.MaxRowsMessage" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="MaxRowsMessageextendsScalabilityMessages.ScalabilityMessagewithProductwithSerializable"></a>
+      <a id="MaxRowsMessage:MaxRowsMessage"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <a href="ScalabilityMessages$$ReadMapMessage.html"><span class="name">ReadMapMessage</span></a><span class="params">()</span><span class="result"> extends <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+        <a href="ScalabilityMessages$$MaxRowsMessage.html"><span class="name">MaxRowsMessage</span></a><span class="params">(<span name="number">number: <span class="extype" name="java.lang.Integer">Integer</span></span>)</span><span class="result"> extends <a href="ScalabilityMessages$$ScalabilityMessage.html" class="extype" name="server.messages.internal.ScalabilityMessages.ScalabilityMessage">ScalabilityMessage</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       </h4>
-      
+      <p class="comment cmt">Set the max number of rows which can be contained in a single Storekeeper map.</p>
+    </li><li name="server.messages.internal.ScalabilityMessages.MaxStorefinderMessage" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="MaxStorefinderMessageextendsScalabilityMessages.ScalabilityMessagewithProductwithSerializable"></a>
+      <a id="MaxStorefinderMessage:MaxStorefinderMessage"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="ScalabilityMessages$$MaxStorefinderMessage.html"><span class="name">MaxStorefinderMessage</span></a><span class="params">(<span name="number">number: <span class="extype" name="java.lang.Integer">Integer</span></span>)</span><span class="result"> extends <a href="ScalabilityMessages$$ScalabilityMessage.html" class="extype" name="server.messages.internal.ScalabilityMessages.ScalabilityMessage">ScalabilityMessage</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4>
+      <p class="comment cmt">Set the max number of Storefinder actors.</p>
+    </li><li name="server.messages.internal.ScalabilityMessages.MaxStorekeeperMessage" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="MaxStorekeeperMessageextendsScalabilityMessages.ScalabilityMessagewithProductwithSerializable"></a>
+      <a id="MaxStorekeeperMessage:MaxStorekeeperMessage"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="ScalabilityMessages$$MaxStorekeeperMessage.html"><span class="name">MaxStorekeeperMessage</span></a><span class="params">(<span name="number">number: <span class="extype" name="java.lang.Integer">Integer</span></span>)</span><span class="result"> extends <a href="ScalabilityMessages$$ScalabilityMessage.html" class="extype" name="server.messages.internal.ScalabilityMessages.ScalabilityMessage">ScalabilityMessage</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4>
+      <p class="comment cmt">Set the max number of Storekeeper actors.</p>
+    </li><li name="server.messages.internal.ScalabilityMessages.ScalabilityMessage" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="ScalabilityMessageextendsAnyRef"></a>
+      <a id="ScalabilityMessage:ScalabilityMessage"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="ScalabilityMessages$$ScalabilityMessage.html"><span class="name">ScalabilityMessage</span></a><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      </h4>
+      <p class="comment cmt">Trait that every message that belongs to scalability operations has to extend.</p>
     </li><li name="server.messages.internal.ScalabilityMessages.SendMapMessage" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="SendMapMessageextendsProductwithSerializable"></a>
+      <a id="SendMapMessageextendsScalabilityMessages.ScalabilityMessagewithProductwithSerializable"></a>
       <a id="SendMapMessage:SendMapMessage"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -104,23 +143,36 @@
         <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <a href="ScalabilityMessages$$SendMapMessage.html"><span class="name">SendMapMessage</span></a><span class="params">(<span name="map">map: <span class="extype" name="scala.collection.immutable.HashMap">HashMap</span>[<span class="extype" name="scala.Predef.String">String</span>, <span class="extype" name="scala.Array">Array</span>[<span class="extype" name="scala.Byte">Byte</span>]]</span>, <span name="actorRef">actorRef: <span class="extype" name="akka.actor.ActorRef">ActorRef</span></span>)</span><span class="result"> extends <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+        <a href="ScalabilityMessages$$SendMapMessage.html"><span class="name">SendMapMessage</span></a><span class="params">(<span name="map">map: <span class="extype" name="scala.collection.mutable.HashMap">HashMap</span>[<span class="extype" name="scala.Predef.String">String</span>, <span class="extype" name="scala.Array">Array</span>[<span class="extype" name="scala.Byte">Byte</span>]]</span>)</span><span class="result"> extends <a href="ScalabilityMessages$$ScalabilityMessage.html" class="extype" name="server.messages.internal.ScalabilityMessages.ScalabilityMessage">ScalabilityMessage</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       </h4>
-      
-    </li><li name="server.messages.internal.ScalabilityMessages.WriteMapMessage" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="WriteMapMessageextendsProductwithSerializable"></a>
-      <a id="WriteMapMessage:WriteMapMessage"></a>
+      <p class="comment cmt">A SendMapMessage is used to tell an actor to transfer an amount of data to an actor during a scaling operation.</p>
+    </li><li name="server.messages.internal.ScalabilityMessages.SetNinjaMessage" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="SetNinjaMessageextendsScalabilityMessages.ScalabilityMessagewithProductwithSerializable"></a>
+      <a id="SetNinjaMessage:SetNinjaMessage"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <a href="ScalabilityMessages$$WriteMapMessage.html"><span class="name">WriteMapMessage</span></a><span class="params">(<span name="map">map: <span class="extype" name="scala.collection.immutable.HashMap">HashMap</span>[<span class="extype" name="scala.Predef.String">String</span>, <span class="extype" name="scala.Array">Array</span>[<span class="extype" name="scala.Byte">Byte</span>]]</span>)</span><span class="result"> extends <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+        <a href="ScalabilityMessages$$SetNinjaMessage.html"><span class="name">SetNinjaMessage</span></a><span class="params">(<span name="number">number: <span class="extype" name="java.lang.Integer">Integer</span></span>)</span><span class="result"> extends <a href="ScalabilityMessages$$ScalabilityMessage.html" class="extype" name="server.messages.internal.ScalabilityMessages.ScalabilityMessage">ScalabilityMessage</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       </h4>
-      
+      <p class="comment cmt">Set the number of Ninja actors.</p>
+    </li><li name="server.messages.internal.ScalabilityMessages.SetWarehousemanMessage" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="SetWarehousemanMessageextendsScalabilityMessages.ScalabilityMessagewithProductwithSerializable"></a>
+      <a id="SetWarehousemanMessage:SetWarehousemanMessage"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="ScalabilityMessages$$SetWarehousemanMessage.html"><span class="name">SetWarehousemanMessage</span></a><span class="params">(<span name="number">number: <span class="extype" name="java.lang.Integer">Integer</span></span>)</span><span class="result"> extends <a href="ScalabilityMessages$$ScalabilityMessage.html" class="extype" name="server.messages.internal.ScalabilityMessages.ScalabilityMessage">ScalabilityMessage</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4>
+      <p class="comment cmt">Set the number of Warehouseman actors.</p>
     </li></ol>
             </div>
 

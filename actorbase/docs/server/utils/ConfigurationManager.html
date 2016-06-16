@@ -39,8 +39,7 @@
       </span>
       </h4>
       
-          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>Created by matteobortolazzo on 31/05/2016.
-Reads and writes various server configurations files.
+          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>Reads and writes various server configurations files.
 </p></div><div class="toggleContainer block">
           <span class="toggle">Linear Supertypes</span>
           <div class="superTypes hiddenContent"><span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
@@ -168,19 +167,6 @@ Reads and writes various server configurations files.
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
-    </li><li name="server.utils.ConfigurationManager#accounts" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="accounts:&lt;error&gt;"></a>
-      <a id="accounts:&lt;error&gt;"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">val</span>
-      </span>
-      <span class="symbol">
-        <span class="name">accounts</span><span class="result">: &lt;error&gt;</span>
-      </span>
-      </h4>
-      
     </li><li name="scala.Any#asInstanceOf" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="asInstanceOf[T0]:T0"></a>
       <a id="asInstanceOf[T0]:T0"></a>
@@ -297,32 +283,6 @@ Reads and writes various server configurations files.
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
-    </li><li name="server.utils.ConfigurationManager#jsonObject" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="jsonObject:&lt;error&gt;"></a>
-      <a id="jsonObject:&lt;error&gt;"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">val</span>
-      </span>
-      <span class="symbol">
-        <span class="name">jsonObject</span><span class="result">: &lt;error&gt;</span>
-      </span>
-      </h4>
-      
-    </li><li name="server.utils.ConfigurationManager#list" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="list:&lt;error&gt;"></a>
-      <a id="list:&lt;error&gt;"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">val</span>
-      </span>
-      <span class="symbol">
-        <span class="name">list</span><span class="result">: &lt;error&gt;</span>
-      </span>
-      </h4>
-      
     </li><li name="scala.AnyRef#ne" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="ne(x$1:AnyRef):Boolean"></a>
       <a id="ne(AnyRef):Boolean"></a>
@@ -375,37 +335,27 @@ Reads and writes various server configurations files.
       </span>
       </h4>
       <p class="shortcomment cmt">Reads from file actors' properties
+Whenever anyone call this method, it needs to catch the following Exceptions
 </p><div class="fullcomment"><div class="comment cmt"><p>Reads from file actors' properties
+Whenever anyone call this method, it needs to catch the following Exceptions
 </p></div><dl class="paramcmts block"><dt class="param">fileName</dt><dd class="cmt"><p>The name of the file that contains the actors properties.
-</p></dd></dl></div>
+</p></dd></dl><dl class="attributes block"> <dt>Exceptions thrown</dt><dd><span class="cmt">Exception</span><span class="cmt">FileNotFoundException</span><span class="cmt">IOException</span></dd></dl></div>
     </li><li name="server.utils.ConfigurationManager#readDoorkeepersSettings" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="readDoorkeepersSettings(fileName:String):java.util.HashMap[String,Integer]"></a>
-      <a id="readDoorkeepersSettings(String):HashMap[String,Integer]"></a>
+      <a id="readDoorkeepersSettings(fileName:String):java.util.ArrayList[Integer]"></a>
+      <a id="readDoorkeepersSettings(String):ArrayList[Integer]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">readDoorkeepersSettings</span><span class="params">(<span name="fileName">fileName: <span class="extype" name="scala.Predef.String">String</span> = <span class="symbol">&quot;access.json&quot;</span></span>)</span><span class="result">: <span class="extype" name="java.util.HashMap">HashMap</span>[<span class="extype" name="scala.Predef.String">String</span>, <span class="extype" name="java.lang.Integer">Integer</span>]</span>
+        <span class="name">readDoorkeepersSettings</span><span class="params">(<span name="fileName">fileName: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <span class="extype" name="java.util.ArrayList">ArrayList</span>[<span class="extype" name="java.lang.Integer">Integer</span>]</span>
       </span>
       </h4>
-      <p class="shortcomment cmt">Reads from file doorkeepers' start address and port.</p><div class="fullcomment"><div class="comment cmt"><p>Reads from file doorkeepers' start address and port.
+      <p class="shortcomment cmt">Reads from file doorkeepers' start port.</p><div class="fullcomment"><div class="comment cmt"><p>Reads from file doorkeepers' start port.
+Whenever anyone call this method, it needs to catch the following Exceptions
 </p></div><dl class="paramcmts block"><dt class="param">fileName</dt><dd class="cmt"><p>The name of the file that contains the doorkeeper configuration.</p></dd><dt>returns</dt><dd class="cmt"><p>A list with addresses and ports.
-</p></dd></dl></div>
-    </li><li name="server.utils.ConfigurationManager#source" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="source:&lt;error&gt;"></a>
-      <a id="source:&lt;error&gt;"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">val</span>
-      </span>
-      <span class="symbol">
-        <span class="name">source</span><span class="result">: &lt;error&gt;</span>
-      </span>
-      </h4>
-      
+</p></dd></dl><dl class="attributes block"> <dt>Exceptions thrown</dt><dd><span class="cmt">Exception</span><span class="cmt">FileNotFoundException</span><span class="cmt">IOException</span></dd></dl></div>
     </li><li name="scala.AnyRef#synchronized" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="synchronized[T0](x$1:=&gt;T0):T0"></a>
       <a id="synchronized[T0](⇒T0):T0"></a>
@@ -489,22 +439,6 @@ Reads and writes various server configurations files.
     </span>)</span>
               
         </dd></dl></div>
-    </li><li name="server.utils.ConfigurationManager#writeActorPropertis" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="writeActorPropertis(fileName:String):Unit"></a>
-      <a id="writeActorPropertis(String):Unit"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">writeActorPropertis</span><span class="params">(<span name="fileName">fileName: <span class="extype" name="scala.Predef.String">String</span> = <span class="symbol">&quot;actor_properties.json&quot;</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
-      </span>
-      </h4>
-      <p class="shortcomment cmt">Reads to file actors' properties
-</p><div class="fullcomment"><div class="comment cmt"><p>Reads to file actors' properties
-</p></div><dl class="paramcmts block"><dt class="param">fileName</dt><dd class="cmt"><p>The name of the file that contains the actors properties.
-</p></dd></dl></div>
     </li></ol>
             </div>
 

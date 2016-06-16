@@ -39,11 +39,10 @@
       </span>
       </h4>
       
-          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>Created by lucan on 11/05/2016.
-Manages the filesystem writing and reading on the sisk.
+          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>Manages the filesystem writing and reading on the sisk.
 </p></div><div class="toggleContainer block">
           <span class="toggle">Linear Supertypes</span>
-          <div class="superTypes hiddenContent"><a href="ReplyActor.html" class="extype" name="server.actors.ReplyActor">ReplyActor</a>, <span class="extype" name="akka.actor.ActorLogging">ActorLogging</span>, <span class="extype" name="akka.actor.Actor">Actor</span>, <span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
+          <div class="superTypes hiddenContent"><a href="ReplyActor.html" class="extype" name="server.actors.ReplyActor">ReplyActor</a>, <span class="extype" name="akka.actor.ActorLogging">ActorLogging</span>, <a href="ClusterAwareActor.html" class="extype" name="server.actors.ClusterAwareActor">ClusterAwareActor</a>, <span class="extype" name="akka.actor.Actor">Actor</span>, <span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
         </div></div>
         
 
@@ -61,7 +60,7 @@ Manages the filesystem writing and reading on the sisk.
                 <span class="filtertype">Inherited<br />
                 </span>
                 <ol id="linearization">
-                  <li class="in" name="server.actors.Warehouseman"><span>Warehouseman</span></li><li class="in" name="server.actors.ReplyActor"><span>ReplyActor</span></li><li class="in" name="akka.actor.ActorLogging"><span>ActorLogging</span></li><li class="in" name="akka.actor.Actor"><span>Actor</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
+                  <li class="in" name="server.actors.Warehouseman"><span>Warehouseman</span></li><li class="in" name="server.actors.ReplyActor"><span>ReplyActor</span></li><li class="in" name="akka.actor.ActorLogging"><span>ActorLogging</span></li><li class="in" name="server.actors.ClusterAwareActor"><span>ClusterAwareActor</span></li><li class="in" name="akka.actor.Actor"><span>Actor</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
                 </ol>
               </div><div id="ancestors">
             <span class="filtertype"></span>
@@ -82,7 +81,7 @@ Manages the filesystem writing and reading on the sisk.
         <div id="constructors" class="members">
               <h3>Instance Constructors</h3>
               <ol><li name="server.actors.Warehouseman#&lt;init&gt;" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="&lt;init&gt;(path:String):server.actors.Warehouseman"></a>
+      <a id="&lt;init&gt;(warehousemanType:server.enums.EnumWarehousemanType.WarehousemanType,dbName:String,mapName:String):server.actors.Warehouseman"></a>
       <a id="&lt;init&gt;:Warehouseman"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -90,10 +89,10 @@ Manages the filesystem writing and reading on the sisk.
         <span class="kind">new</span>
       </span>
       <span class="symbol">
-        <span class="name">Warehouseman</span><span class="params">(<span name="path">path: <span class="extype" name="scala.Predef.String">String</span></span>)</span>
+        <span class="name">Warehouseman</span><span class="params">(<span name="warehousemanType">warehousemanType: <a href="../enums/EnumWarehousemanType$$WarehousemanType.html" class="extype" name="server.enums.EnumWarehousemanType.WarehousemanType">WarehousemanType</a></span>, <span name="dbName">dbName: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="mapName">mapName: <span class="extype" name="scala.Predef.String">String</span> = <span class="symbol">null</span></span>)</span>
       </span>
       </h4>
-      <p class="shortcomment cmt"></p><div class="fullcomment"><div class="comment cmt"></div><dl class="paramcmts block"><dt class="param">path</dt><dd class="cmt"><p>The map's saving path.
+      <p class="shortcomment cmt">create a new Warehouseman actor instance from a String.</p><div class="fullcomment"><div class="comment cmt"><p>create a new Warehouseman actor instance from a String.</p></div><dl class="paramcmts block"><dt class="param">warehousemanType</dt><dd class="cmt"><p>The behaviour of theWarehouseman</p></dd><dt class="param">dbName</dt><dd class="cmt"><p>The database name.</p></dd><dt class="param">mapName</dt><dd class="cmt"><p>The map name.
 </p></dd></dl></div>
     </li></ol>
             </div>
@@ -186,7 +185,7 @@ Manages the filesystem writing and reading on the sisk.
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
     </li><li name="akka.actor.Actor#aroundPostRestart" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="aroundPostRestart(reason:&lt;?&gt;):Unit"></a>
+      <a id="aroundPostRestart(reason:Throwable):Unit"></a>
       <a id="aroundPostRestart(Throwable):Unit"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -212,7 +211,7 @@ Manages the filesystem writing and reading on the sisk.
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a href="../../akka/package.html" class="extype" name="akka">akka</a>] </dd><dt>Definition Classes</dt><dd>Actor</dd></dl></div>
     </li><li name="akka.actor.Actor#aroundPreRestart" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="aroundPreRestart(reason:&lt;?&gt;,message:&lt;?&gt;):Unit"></a>
+      <a id="aroundPreRestart(reason:Throwable,message:Option[Any]):Unit"></a>
       <a id="aroundPreRestart(Throwable,Option[Any]):Unit"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -238,7 +237,7 @@ Manages the filesystem writing and reading on the sisk.
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a href="../../akka/package.html" class="extype" name="akka">akka</a>] </dd><dt>Definition Classes</dt><dd>Actor</dd></dl></div>
     </li><li name="akka.actor.Actor#aroundReceive" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="aroundReceive(receive:&lt;?&gt;,msg:&lt;?&gt;):Unit"></a>
+      <a id="aroundReceive(receive:akka.actor.Actor.Receive,msg:Any):Unit"></a>
       <a id="aroundReceive(akka.actor.Actor.Receive,Any):Unit"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -282,6 +281,19 @@ Manages the filesystem writing and reading on the sisk.
     </span>)</span>
               
         </dd></dl></div>
+    </li><li name="server.actors.ClusterAwareActor#clusterListener" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="clusterListener:akka.actor.ActorRef"></a>
+      <a id="clusterListener:ActorRef"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">var</span>
+      </span>
+      <span class="symbol">
+        <span class="name">clusterListener</span><span class="result">: <span class="extype" name="akka.actor.ActorRef">ActorRef</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="ClusterAwareActor.html" class="extype" name="server.actors.ClusterAwareActor">ClusterAwareActor</a></dd></dl></div>
     </li><li name="akka.actor.Actor#context" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="context:akka.actor.ActorContext"></a>
       <a id="context:ActorContext"></a>
@@ -309,6 +321,19 @@ Manages the filesystem writing and reading on the sisk.
       </h4>
       <p class="shortcomment cmt">Return the name of the current running method.</p><div class="fullcomment"><div class="comment cmt"><p>Return the name of the current running method.</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>The name of the method that call this.
 </p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="ReplyActor.html" class="extype" name="server.actors.ReplyActor">ReplyActor</a></dd></dl></div>
+    </li><li name="server.actors.ClusterAwareActor#ec" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="ec:scala.concurrent.ExecutionContextExecutor"></a>
+      <a id="ec:ExecutionContextExecutor"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">implicit </span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">ec</span><span class="result">: <span class="extype" name="scala.concurrent.ExecutionContextExecutor">ExecutionContextExecutor</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="ClusterAwareActor.html" class="extype" name="server.actors.ClusterAwareActor">ClusterAwareActor</a></dd></dl></div>
     </li><li name="scala.AnyRef#eq" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="eq(x$1:AnyRef):Boolean"></a>
       <a id="eq(AnyRef):Boolean"></a>
@@ -341,7 +366,7 @@ Manages the filesystem writing and reading on the sisk.
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
-        <span class="kind">val</span>
+        <span class="kind">var</span>
       </span>
       <span class="symbol">
         <span class="name">fileManager</span><span class="result">: <a href="../utils/FileManager.html" class="extype" name="server.utils.FileManager">FileManager</a></span>
@@ -448,6 +473,23 @@ Manages the filesystem writing and reading on the sisk.
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="server.actors.ClusterAwareActor#nextAddress" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="nextAddress:akka.actor.Address"></a>
+      <a id="nextAddress:Address"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">nextAddress</span><span class="result">: <span class="extype" name="akka.actor.Address">Address</span></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Returns an address of one node in the cluster.</p><div class="fullcomment"><div class="comment cmt"><p>Returns an address of one node in the cluster.
+This method sends a message to the ClusterListener of the same node of this actor
+so it will stop the thread of this actor while waiting for a response.
+</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>the address of type akka.actor.Address.
+</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="ClusterAwareActor.html" class="extype" name="server.actors.ClusterAwareActor">ClusterAwareActor</a></dd></dl></div>
     </li><li name="scala.AnyRef#notify" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="notify():Unit"></a>
       <a id="notify():Unit"></a>
@@ -475,7 +517,7 @@ Manages the filesystem writing and reading on the sisk.
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
     </li><li name="akka.actor.Actor#postRestart" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="postRestart(reason:&lt;?&gt;):Unit"></a>
+      <a id="postRestart(reason:Throwable):Unit"></a>
       <a id="postRestart(Throwable):Unit"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -513,7 +555,7 @@ Manages the filesystem writing and reading on the sisk.
               
         </dd></dl></div>
     </li><li name="akka.actor.Actor#preRestart" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="preRestart(reason:&lt;?&gt;,message:&lt;?&gt;):Unit"></a>
+      <a id="preRestart(reason:Throwable,message:Option[Any]):Unit"></a>
       <a id="preRestart(Throwable,Option[Any]):Unit"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -531,7 +573,7 @@ Manages the filesystem writing and reading on the sisk.
     </span>)</span>
               
         </dd></dl></div>
-    </li><li name="akka.actor.Actor#preStart" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+    </li><li name="server.actors.Warehouseman#preStart" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="preStart():Unit"></a>
       <a id="preStart():Unit"></a>
       <h4 class="signature">
@@ -543,13 +585,10 @@ Manages the filesystem writing and reading on the sisk.
         <span class="name">preStart</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Actor</dd><dt>Annotations</dt><dd>
-                <span class="name">@throws</span><span class="args">(<span>
-      
-      <span class="symbol">classOf[java.lang.Exception]</span>
-    </span>)</span>
-              
-        </dd></dl></div>
+      <p class="shortcomment cmt">Override of the actor's preStart method.</p><div class="fullcomment"><div class="comment cmt"><p>Override of the actor's preStart method.
+Changes the actor's behaviour based on the constructor.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="server.actors.Warehouseman">Warehouseman</a> → Actor</dd><dt>See also</dt><dd><span class="cmt"><p>#become(Actor.receive)
+</p></span></dd></dl></div>
     </li><li name="server.actors.Warehouseman#receive" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="receive:PartialFunction[Any,Unit]"></a>
       <a id="receive:PartialFunction[Any,Unit]"></a>
@@ -646,6 +685,19 @@ Handles RowMessage messages and ScalabilityMessage messages.
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="server.actors.ClusterAwareActor#timeout" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="timeout:akka.util.Timeout"></a>
+      <a id="timeout:Timeout"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">implicit </span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">timeout</span><span class="result">: <span class="extype" name="akka.util.Timeout">Timeout</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="ClusterAwareActor.html" class="extype" name="server.actors.ClusterAwareActor">ClusterAwareActor</a></dd></dl></div>
     </li><li name="scala.AnyRef#toString" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="toString():String"></a>
       <a id="toString():String"></a>
@@ -660,7 +712,7 @@ Handles RowMessage messages and ScalabilityMessage messages.
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
     </li><li name="akka.actor.Actor#unhandled" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="unhandled(message:&lt;?&gt;):Unit"></a>
+      <a id="unhandled(message:Any):Unit"></a>
       <a id="unhandled(Any):Unit"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -758,6 +810,8 @@ Handles RowMessage messages and ScalabilityMessage messages.
               <h3>Inherited from <a href="ReplyActor.html" class="extype" name="server.actors.ReplyActor">ReplyActor</a></h3>
             </div><div class="parent" name="akka.actor.ActorLogging">
               <h3>Inherited from <span class="extype" name="akka.actor.ActorLogging">ActorLogging</span></h3>
+            </div><div class="parent" name="server.actors.ClusterAwareActor">
+              <h3>Inherited from <a href="ClusterAwareActor.html" class="extype" name="server.actors.ClusterAwareActor">ClusterAwareActor</a></h3>
             </div><div class="parent" name="akka.actor.Actor">
               <h3>Inherited from <span class="extype" name="akka.actor.Actor">Actor</span></h3>
             </div><div class="parent" name="scala.AnyRef">

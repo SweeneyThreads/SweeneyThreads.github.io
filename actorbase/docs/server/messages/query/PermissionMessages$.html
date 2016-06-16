@@ -39,7 +39,7 @@
       </span>
       </h4>
       
-          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>Created by matteobortolazzo on 04/05/2016.
+          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>PermissionMessages are used to express permissions level requests.
 </p></div><div class="toggleContainer block">
           <span class="toggle">Linear Supertypes</span>
           <div class="superTypes hiddenContent"><span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
@@ -94,7 +94,7 @@
         <a href="PermissionMessages$$AdminPermissionMessage.html"><span class="name">AdminPermissionMessage</span></a><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
       </span>
       </h4>
-      
+      <p class="comment cmt">Trait that every message that defines an admin operation with permissions has to extend.</p>
     </li><li name="server.messages.query.PermissionMessages.NoAdminPermissionInfo" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="NoAdminPermissionInfoextendsReplyInfowithProductwithSerializable"></a>
       <a id="NoAdminPermissionInfo:NoAdminPermissionInfo"></a>
@@ -107,7 +107,8 @@
         <a href="PermissionMessages$$NoAdminPermissionInfo.html"><span class="name">NoAdminPermissionInfo</span></a><span class="params">()</span><span class="result"> extends <a href="ReplyInfo.html" class="extype" name="server.messages.query.ReplyInfo">ReplyInfo</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       </h4>
-      
+      <p class="comment cmt">A NoAdminPermissionInfo is a ReplyInfo containing the response to print on the console when a user tries to
+use an admin command without being an admin.</p>
     </li><li name="server.messages.query.PermissionMessages.NoPermissionMessage" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
       <a id="NoPermissionMessageextendsAnyRef"></a>
       <a id="NoPermissionMessage:NoPermissionMessage"></a>
@@ -120,7 +121,7 @@
         <a href="PermissionMessages$$NoPermissionMessage.html"><span class="name">NoPermissionMessage</span></a><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
       </span>
       </h4>
-      
+      <p class="comment cmt">Trait that every message that defines operations that doesn't need specific permissions has to extend.</p>
     </li><li name="server.messages.query.PermissionMessages.NoReadPermissionInfo" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="NoReadPermissionInfoextendsReplyInfowithProductwithSerializable"></a>
       <a id="NoReadPermissionInfo:NoReadPermissionInfo"></a>
@@ -133,7 +134,8 @@
         <a href="PermissionMessages$$NoReadPermissionInfo.html"><span class="name">NoReadPermissionInfo</span></a><span class="params">()</span><span class="result"> extends <a href="ReplyInfo.html" class="extype" name="server.messages.query.ReplyInfo">ReplyInfo</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       </h4>
-      
+      <p class="comment cmt">A NoReadPermissionInfo is a ReplyInfo containing the response to print on the console when a user tries to
+query a database on which he/she has no Read permission.</p>
     </li><li name="server.messages.query.PermissionMessages.NoWritePermissionInfo" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="NoWritePermissionInfoextendsReplyInfowithProductwithSerializable"></a>
       <a id="NoWritePermissionInfo:NoWritePermissionInfo"></a>
@@ -146,7 +148,8 @@
         <a href="PermissionMessages$$NoWritePermissionInfo.html"><span class="name">NoWritePermissionInfo</span></a><span class="params">()</span><span class="result"> extends <a href="ReplyInfo.html" class="extype" name="server.messages.query.ReplyInfo">ReplyInfo</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       </h4>
-      
+      <p class="comment cmt">A NoWritePermissionInfo is a ReplyInfo containing the response to print on the console when a user tries to
+modify something in a database on which he/she has no ReadWrite permission.</p>
     </li><li name="server.messages.query.PermissionMessages.ReadMessage" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
       <a id="ReadMessageextendsPermissionMessages.NoPermissionMessage"></a>
       <a id="ReadMessage:ReadMessage"></a>
@@ -159,7 +162,7 @@
         <a href="PermissionMessages$$ReadMessage.html"><span class="name">ReadMessage</span></a><span class="result"> extends <a href="PermissionMessages$$NoPermissionMessage.html" class="extype" name="server.messages.query.PermissionMessages.NoPermissionMessage">NoPermissionMessage</a></span>
       </span>
       </h4>
-      
+      <p class="comment cmt">Trait that every message that defines an operation that needs read permissions has to extend.</p>
     </li><li name="server.messages.query.PermissionMessages.ReadWriteMessage" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
       <a id="ReadWriteMessageextendsPermissionMessages.ReadMessage"></a>
       <a id="ReadWriteMessage:ReadWriteMessage"></a>
@@ -172,7 +175,7 @@
         <a href="PermissionMessages$$ReadWriteMessage.html"><span class="name">ReadWriteMessage</span></a><span class="result"> extends <a href="PermissionMessages$$ReadMessage.html" class="extype" name="server.messages.query.PermissionMessages.ReadMessage">ReadMessage</a></span>
       </span>
       </h4>
-      
+      <p class="comment cmt">Trait that every message that defines an operation that needs write permissions has to extend.</p>
     </li></ol>
             </div>
 

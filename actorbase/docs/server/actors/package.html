@@ -58,7 +58,21 @@
 
         <div id="types" class="types members">
               <h3>Type Members</h3>
-              <ol><li name="server.actors.Doorkeeper" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+              <ol><li name="server.actors.ClusterAwareActor" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="ClusterAwareActorextendsActor"></a>
+      <a id="ClusterAwareActor:ClusterAwareActor"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="ClusterAwareActor.html"><span class="name">ClusterAwareActor</span></a><span class="result"> extends <span class="extype" name="akka.actor.Actor">Actor</span></span>
+      </span>
+      </h4>
+      <p class="comment cmt">Trait that gives to an actor the nextAddress method,
+should be extended from actors that needs to create actors in other nodes of the cluster.</p>
+    </li><li name="server.actors.Doorkeeper" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="DoorkeeperextendsActorwithActorLogging"></a>
       <a id="Doorkeeper:Doorkeeper"></a>
       <h4 class="signature">
@@ -70,7 +84,20 @@
         <a href="Doorkeeper.html"><span class="name">Doorkeeper</span></a><span class="result"> extends <span class="extype" name="akka.actor.Actor">Actor</span> with <span class="extype" name="akka.actor.ActorLogging">ActorLogging</span></span>
       </span>
       </h4>
-      <p class="comment cmt">Created by matteobortolazzo on 01/05/2016.</p>
+      <p class="comment cmt">The actor that represents the entry point to the server.</p>
+    </li><li name="server.actors.IndexManager" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="IndexManagerextendsReplyActor"></a>
+      <a id="IndexManager:IndexManager"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="IndexManager.html"><span class="name">IndexManager</span></a><span class="result"> extends <a href="ReplyActor.html" class="extype" name="server.actors.ReplyActor">ReplyActor</a></span>
+      </span>
+      </h4>
+      <p class="comment cmt">An IndexManager represents a map of Actorbase.</p>
     </li><li name="server.actors.Main" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="MainextendsReplyActor"></a>
       <a id="Main:Main"></a>
@@ -83,9 +110,22 @@
         <a href="Main.html"><span class="name">Main</span></a><span class="result"> extends <a href="ReplyActor.html" class="extype" name="server.actors.ReplyActor">ReplyActor</a></span>
       </span>
       </h4>
-      <p class="comment cmt">Created by matteobortolazzo on 01/05/2016.</p>
+      <p class="comment cmt">Actor that executes the messages from the client.</p>
+    </li><li name="server.actors.MapManager" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="MapManagerextendsReplyActor"></a>
+      <a id="MapManager:MapManager"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="MapManager.html"><span class="name">MapManager</span></a><span class="result"> extends <a href="ReplyActor.html" class="extype" name="server.actors.ReplyActor">ReplyActor</a></span>
+      </span>
+      </h4>
+      <p class="comment cmt">A MapManager actor represents a database of Actorbase.</p>
     </li><li name="server.actors.ReplyActor" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
-      <a id="ReplyActorextendsActorwithActorLogging"></a>
+      <a id="ReplyActorextendsClusterAwareActorwithActorLogging"></a>
       <a id="ReplyActor:ReplyActor"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -93,36 +133,10 @@
         <span class="kind">trait</span>
       </span>
       <span class="symbol">
-        <a href="ReplyActor.html"><span class="name">ReplyActor</span></a><span class="result"> extends <span class="extype" name="akka.actor.Actor">Actor</span> with <span class="extype" name="akka.actor.ActorLogging">ActorLogging</span></span>
+        <a href="ReplyActor.html"><span class="name">ReplyActor</span></a><span class="result"> extends <a href="ClusterAwareActor.html" class="extype" name="server.actors.ClusterAwareActor">ClusterAwareActor</a> with <span class="extype" name="akka.actor.ActorLogging">ActorLogging</span></span>
       </span>
       </h4>
-      <p class="comment cmt">Created by matteobortolazzo on 26/05/2016.</p>
-    </li><li name="server.actors.Storefinder" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="StorefinderextendsReplyActor"></a>
-      <a id="Storefinder:Storefinder"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">class</span>
-      </span>
-      <span class="symbol">
-        <a href="Storefinder.html"><span class="name">Storefinder</span></a><span class="result"> extends <a href="ReplyActor.html" class="extype" name="server.actors.ReplyActor">ReplyActor</a></span>
-      </span>
-      </h4>
-      <p class="comment cmt">Created by matteobortolazzo on 02/05/2016.</p>
-    </li><li name="server.actors.Storekeeper" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="StorekeeperextendsReplyActor"></a>
-      <a id="Storekeeper:Storekeeper"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">class</span>
-      </span>
-      <span class="symbol">
-        <a href="Storekeeper.html"><span class="name">Storekeeper</span></a><span class="result"> extends <a href="ReplyActor.html" class="extype" name="server.actors.ReplyActor">ReplyActor</a></span>
-      </span>
-      </h4>
-      <p class="comment cmt">Created by matteobortolazzo on 02/05/2016.</p>
+      <p class="comment cmt">Interface that gives an actor the ability to reply and log.</p>
     </li><li name="server.actors.Storemanager" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="StoremanagerextendsReplyActor"></a>
       <a id="Storemanager:Storemanager"></a>
@@ -135,7 +149,8 @@
         <a href="Storemanager.html"><span class="name">Storemanager</span></a><span class="result"> extends <a href="ReplyActor.html" class="extype" name="server.actors.ReplyActor">ReplyActor</a></span>
       </span>
       </h4>
-      <p class="comment cmt">Created by matteobortolazzo on 02/05/2016.</p>
+      <p class="comment cmt">A Storemanager manages data stored in RAM
+</p>
     </li><li name="server.actors.Usermanager" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="UsermanagerextendsReplyActor"></a>
       <a id="Usermanager:Usermanager"></a>
@@ -148,7 +163,7 @@
         <a href="Usermanager.html"><span class="name">Usermanager</span></a><span class="result"> extends <a href="ReplyActor.html" class="extype" name="server.actors.ReplyActor">ReplyActor</a></span>
       </span>
       </h4>
-      <p class="comment cmt">Created by matteobortolazzo on 01/05/2016.</p>
+      <p class="comment cmt">This actor handles TCP requests from the client.</p>
     </li><li name="server.actors.Warehouseman" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="WarehousemanextendsReplyActor"></a>
       <a id="Warehouseman:Warehouseman"></a>
@@ -161,7 +176,7 @@
         <a href="Warehouseman.html"><span class="name">Warehouseman</span></a><span class="result"> extends <a href="ReplyActor.html" class="extype" name="server.actors.ReplyActor">ReplyActor</a></span>
       </span>
       </h4>
-      <p class="comment cmt">Created by lucan on 11/05/2016.</p>
+      <p class="comment cmt">Manages the filesystem writing and reading on the sisk.</p>
     </li></ol>
             </div>
 

@@ -183,6 +183,32 @@
     </span>)</span>
               
         </dd></dl></div>
+    </li><li name="server.Server#clusterListener" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="clusterListener:akka.actor.ActorRef"></a>
+      <a id="clusterListener:ActorRef"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">var</span>
+      </span>
+      <span class="symbol">
+        <span class="name">clusterListener</span><span class="result">: <span class="extype" name="akka.actor.ActorRef">ActorRef</span></span>
+      </span>
+      </h4>
+      
+    </li><li name="server.Server#configurationManager" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="configurationManager:server.utils.ConfigurationManager"></a>
+      <a id="configurationManager:ConfigurationManager"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">configurationManager</span><span class="result">: <a href="utils/ConfigurationManager.html" class="extype" name="server.utils.ConfigurationManager">ConfigurationManager</a></span>
+      </span>
+      </h4>
+      
     </li><li name="server.Server#ec" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="ec:scala.concurrent.ExecutionContextExecutor"></a>
       <a id="ec:ExecutionContextExecutor"></a>
@@ -222,19 +248,6 @@
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
-    </li><li name="server.Server#fileReader" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="fileReader:server.utils.ConfigurationManager"></a>
-      <a id="fileReader:ConfigurationManager"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">var</span>
-      </span>
-      <span class="symbol">
-        <span class="name">fileReader</span><span class="result">: <a href="utils/ConfigurationManager.html" class="extype" name="server.utils.ConfigurationManager">ConfigurationManager</a></span>
-      </span>
-      </h4>
-      
     </li><li name="scala.AnyRef#finalize" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="finalize():Unit"></a>
       <a id="finalize():Unit"></a>
@@ -358,29 +371,42 @@
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
-    </li><li name="server.Server#permissions" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="permissions:java.util.concurrent.ConcurrentHashMap[String,java.util.concurrent.ConcurrentHashMap[String,server.enums.EnumPermission.UserPermission]]"></a>
-      <a id="permissions:ConcurrentHashMap[String,ConcurrentHashMap[String,UserPermission]]"></a>
+    </li><li name="server.Server#sFclusterListener" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="sFclusterListener:akka.actor.ActorRef"></a>
+      <a id="sFclusterListener:ActorRef"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">var</span>
       </span>
       <span class="symbol">
-        <span class="name">permissions</span><span class="result">: <span class="extype" name="java.util.concurrent.ConcurrentHashMap">ConcurrentHashMap</span>[<span class="extype" name="scala.Predef.String">String</span>, <span class="extype" name="java.util.concurrent.ConcurrentHashMap">ConcurrentHashMap</span>[<span class="extype" name="scala.Predef.String">String</span>, <a href="enums/EnumPermission$$UserPermission.html" class="extype" name="server.enums.EnumPermission.UserPermission">UserPermission</a>]]</span>
+        <span class="name">sFclusterListener</span><span class="result">: <span class="extype" name="akka.actor.ActorRef">ActorRef</span></span>
       </span>
       </h4>
       
-    </li><li name="server.Server#storemanagers" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="storemanagers:java.util.concurrent.ConcurrentHashMap[String,akka.actor.ActorRef]"></a>
-      <a id="storemanagers:ConcurrentHashMap[String,ActorRef]"></a>
+    </li><li name="server.Server#sKclusterListener" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="sKclusterListener:akka.actor.ActorRef"></a>
+      <a id="sKclusterListener:ActorRef"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">var</span>
       </span>
       <span class="symbol">
-        <span class="name">storemanagers</span><span class="result">: <span class="extype" name="java.util.concurrent.ConcurrentHashMap">ConcurrentHashMap</span>[<span class="extype" name="scala.Predef.String">String</span>, <span class="extype" name="akka.actor.ActorRef">ActorRef</span>]</span>
+        <span class="name">sKclusterListener</span><span class="result">: <span class="extype" name="akka.actor.ActorRef">ActorRef</span></span>
+      </span>
+      </h4>
+      
+    </li><li name="server.Server#settingsManager" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="settingsManager:akka.actor.ActorRef"></a>
+      <a id="settingsManager:ActorRef"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">var</span>
+      </span>
+      <span class="symbol">
+        <span class="name">settingsManager</span><span class="result">: <span class="extype" name="akka.actor.ActorRef">ActorRef</span></span>
       </span>
       </h4>
       
@@ -397,19 +423,6 @@
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
-    </li><li name="server.Server#system" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="system:akka.actor.ActorSystem"></a>
-      <a id="system:ActorSystem"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">var</span>
-      </span>
-      <span class="symbol">
-        <span class="name">system</span><span class="result">: <span class="extype" name="akka.actor.ActorSystem">ActorSystem</span></span>
-      </span>
-      </h4>
-      
     </li><li name="server.Server#timeout" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="timeout:akka.util.Timeout"></a>
       <a id="timeout:Timeout"></a>
@@ -436,19 +449,6 @@
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
-    </li><li name="server.Server#users" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="users:java.util.concurrent.ConcurrentHashMap[String,String]"></a>
-      <a id="users:ConcurrentHashMap[String,String]"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">var</span>
-      </span>
-      <span class="symbol">
-        <span class="name">users</span><span class="result">: <span class="extype" name="java.util.concurrent.ConcurrentHashMap">ConcurrentHashMap</span>[<span class="extype" name="scala.Predef.String">String</span>, <span class="extype" name="scala.Predef.String">String</span>]</span>
-      </span>
-      </h4>
-      
     </li><li name="scala.AnyRef#wait" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="wait():Unit"></a>
       <a id="wait():Unit"></a>

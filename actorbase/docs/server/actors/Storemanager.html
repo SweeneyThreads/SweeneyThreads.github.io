@@ -39,12 +39,10 @@
       </span>
       </h4>
       
-          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>Created by matteobortolazzo on 02/05/2016.
-Actor that represent a database or part of it, it manages indexes and backups.  *
-if it's  the 'master' database it creates the 'users' and the 'permissions' map.
+          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>A Storemanager manages data stored in RAM
 </p></div><div class="toggleContainer block">
           <span class="toggle">Linear Supertypes</span>
-          <div class="superTypes hiddenContent"><a href="ReplyActor.html" class="extype" name="server.actors.ReplyActor">ReplyActor</a>, <span class="extype" name="akka.actor.ActorLogging">ActorLogging</span>, <span class="extype" name="akka.actor.Actor">Actor</span>, <span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
+          <div class="superTypes hiddenContent"><a href="ReplyActor.html" class="extype" name="server.actors.ReplyActor">ReplyActor</a>, <span class="extype" name="akka.actor.ActorLogging">ActorLogging</span>, <a href="ClusterAwareActor.html" class="extype" name="server.actors.ClusterAwareActor">ClusterAwareActor</a>, <span class="extype" name="akka.actor.Actor">Actor</span>, <span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
         </div></div>
         
 
@@ -62,7 +60,7 @@ if it's  the 'master' database it creates the 'users' and the 'permissions' map.
                 <span class="filtertype">Inherited<br />
                 </span>
                 <ol id="linearization">
-                  <li class="in" name="server.actors.Storemanager"><span>Storemanager</span></li><li class="in" name="server.actors.ReplyActor"><span>ReplyActor</span></li><li class="in" name="akka.actor.ActorLogging"><span>ActorLogging</span></li><li class="in" name="akka.actor.Actor"><span>Actor</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
+                  <li class="in" name="server.actors.Storemanager"><span>Storemanager</span></li><li class="in" name="server.actors.ReplyActor"><span>ReplyActor</span></li><li class="in" name="akka.actor.ActorLogging"><span>ActorLogging</span></li><li class="in" name="server.actors.ClusterAwareActor"><span>ClusterAwareActor</span></li><li class="in" name="akka.actor.Actor"><span>Actor</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
                 </ol>
               </div><div id="ancestors">
             <span class="filtertype"></span>
@@ -82,8 +80,8 @@ if it's  the 'master' database it creates the 'users' and the 'permissions' map.
         <div id="allMembers">
         <div id="constructors" class="members">
               <h3>Instance Constructors</h3>
-              <ol><li name="server.actors.Storemanager#&lt;init&gt;" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="&lt;init&gt;():server.actors.Storemanager"></a>
+              <ol><li name="server.actors.Storemanager#&lt;init&gt;" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="&lt;init&gt;(map:java.util.concurrent.ConcurrentHashMap[String,Array[Byte]],index:(String,String),storemanagerType:server.enums.EnumStoremanagerType.StoremanagerType,ninjas:Array[akka.actor.ActorRef]):server.actors.Storemanager"></a>
       <a id="&lt;init&gt;:Storemanager"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -91,16 +89,30 @@ if it's  the 'master' database it creates the 'users' and the 'permissions' map.
         <span class="kind">new</span>
       </span>
       <span class="symbol">
-        <span class="name">Storemanager</span><span class="params">()</span>
+        <span class="name">Storemanager</span><span class="params">(<span name="map">map: <span class="extype" name="java.util.concurrent.ConcurrentHashMap">ConcurrentHashMap</span>[<span class="extype" name="scala.Predef.String">String</span>, <span class="extype" name="scala.Array">Array</span>[<span class="extype" name="scala.Byte">Byte</span>]]</span>, <span name="index">index: (<span class="extype" name="scala.Predef.String">String</span>, <span class="extype" name="scala.Predef.String">String</span>)</span>, <span name="storemanagerType">storemanagerType: <a href="../enums/EnumStoremanagerType$$StoremanagerType.html" class="extype" name="server.enums.EnumStoremanagerType.StoremanagerType">StoremanagerType</a></span>, <span name="ninjas">ninjas: <span class="extype" name="scala.Array">Array</span>[<span class="extype" name="akka.actor.ActorRef">ActorRef</span>] = <span class="symbol">null</span></span>)</span>
       </span>
       </h4>
-      
+      <p class="shortcomment cmt"></p><div class="fullcomment"><div class="comment cmt"></div><dl class="paramcmts block"><dt class="param">map</dt><dd class="cmt"><p>the data to manage</p></dd><dt class="param">index</dt><dd class="cmt"><p>the index of data</p></dd><dt class="param">storemanagerType</dt><dd class="cmt"><p>the behaviour of the storemanager</p></dd><dt class="param">ninjas</dt><dd class="cmt"><p>the ninjas of the storemanager
+</p></dd></dl></div>
     </li></ol>
             </div>
 
         <div id="types" class="types members">
               <h3>Type Members</h3>
-              <ol><li name="akka.actor.Actor.Receive" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+              <ol><li name="server.actors.Storemanager.Child" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="ChildextendsAnyRef"></a>
+      <a id="Child:Child"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="Storemanager$Child.html"><span class="name">Child</span></a><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      </h4>
+      <p class="comment cmt">Class that represents a child of a storemanager.</p>
+    </li><li name="akka.actor.Actor.Receive" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="Receive=akka.actor.Actor.Receive"></a>
       <a id="Receive:Receive"></a>
       <h4 class="signature">
@@ -282,6 +294,19 @@ if it's  the 'master' database it creates the 'users' and the 'permissions' map.
     </span>)</span>
               
         </dd></dl></div>
+    </li><li name="server.actors.ClusterAwareActor#clusterListener" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="clusterListener:akka.actor.ActorRef"></a>
+      <a id="clusterListener:ActorRef"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">var</span>
+      </span>
+      <span class="symbol">
+        <span class="name">clusterListener</span><span class="result">: <span class="extype" name="akka.actor.ActorRef">ActorRef</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="ClusterAwareActor.html" class="extype" name="server.actors.ClusterAwareActor">ClusterAwareActor</a></dd></dl></div>
     </li><li name="akka.actor.Actor#context" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="context:akka.actor.ActorContext"></a>
       <a id="context:ActorContext"></a>
@@ -309,7 +334,7 @@ if it's  the 'master' database it creates the 'users' and the 'permissions' map.
       </h4>
       <p class="shortcomment cmt">Return the name of the current running method.</p><div class="fullcomment"><div class="comment cmt"><p>Return the name of the current running method.</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>The name of the method that call this.
 </p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="ReplyActor.html" class="extype" name="server.actors.ReplyActor">ReplyActor</a></dd></dl></div>
-    </li><li name="server.actors.Storemanager#ec" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+    </li><li name="server.actors.ClusterAwareActor#ec" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="ec:scala.concurrent.ExecutionContextExecutor"></a>
       <a id="ec:ExecutionContextExecutor"></a>
       <h4 class="signature">
@@ -321,7 +346,7 @@ if it's  the 'master' database it creates the 'users' and the 'permissions' map.
         <span class="name">ec</span><span class="result">: <span class="extype" name="scala.concurrent.ExecutionContextExecutor">ExecutionContextExecutor</span></span>
       </span>
       </h4>
-      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="ClusterAwareActor.html" class="extype" name="server.actors.ClusterAwareActor">ClusterAwareActor</a></dd></dl></div>
     </li><li name="scala.AnyRef#eq" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="eq(x$1:AnyRef):Boolean"></a>
       <a id="eq(AnyRef):Boolean"></a>
@@ -380,25 +405,6 @@ if it's  the 'master' database it creates the 'users' and the 'permissions' map.
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
-    </li><li name="server.actors.Storemanager#handleMapMessage" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="handleMapMessage(message:server.messages.query.user.MapMessages.MapMessage):Unit"></a>
-      <a id="handleMapMessage(MapMessage):Unit"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">handleMapMessage</span><span class="params">(<span name="message">message: <a href="../messages/query/user/MapMessages$$MapMessage.html" class="extype" name="server.messages.query.user.MapMessages.MapMessage">MapMessage</a></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
-      </span>
-      </h4>
-      <p class="shortcomment cmt">Processes only MapMessage messages.</p><div class="fullcomment"><div class="comment cmt"><p>Processes only MapMessage messages.
-Handles ListMapMessage messages returning the list of maps.
-Handles CreateMapMessage messages creating a new Storefinder actor which represents the new map.
-Handles DeleteMapMessage messages deleting Storefinder actors that represent the map.
-</p></div><dl class="paramcmts block"><dt class="param">message</dt><dd class="cmt"><p>The MapMessage message to precess.
-</p></dd></dl><dl class="attributes block"> <dt>See also</dt><dd><span class="cmt"><p>ReplyMessage
-</p></span><span class="cmt"><p>DeleteMapMessage</p></span><span class="cmt"><p>CreateMapMessage</p></span><span class="cmt"><p>ListMapMessage</p></span><span class="cmt"><p>MapMessage</p></span></dd></dl></div>
     </li><li name="scala.AnyRef#hashCode" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="hashCode():Int"></a>
       <a id="hashCode():Int"></a>
@@ -412,6 +418,19 @@ Handles DeleteMapMessage messages deleting Storefinder actors that represent the
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="server.actors.Storemanager#index" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="index:(String,String)"></a>
+      <a id="index:(String,String)"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">index</span><span class="result">: (<span class="extype" name="scala.Predef.String">String</span>, <span class="extype" name="scala.Predef.String">String</span>)</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">the index of data</p>
     </li><li name="scala.Any#isInstanceOf" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="isInstanceOf[T0]:Boolean"></a>
       <a id="isInstanceOf[T0]:Boolean"></a>
@@ -425,6 +444,19 @@ Handles DeleteMapMessage messages deleting Storefinder actors that represent the
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
+    </li><li name="server.actors.Storemanager#leftChild" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="leftChild:Storemanager.this.Child"></a>
+      <a id="leftChild:Child"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">var</span>
+      </span>
+      <span class="symbol">
+        <span class="name">leftChild</span><span class="result">: <a href="Storemanager$Child.html" class="extype" name="server.actors.Storemanager.Child">Child</a></span>
+      </span>
+      </h4>
+      
     </li><li name="akka.actor.ActorLogging#log" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="log:akka.event.LoggingAdapter"></a>
       <a id="log:LoggingAdapter"></a>
@@ -454,6 +486,19 @@ Handles DeleteMapMessage messages deleting Storefinder actors that represent the
 </p></div><dl class="paramcmts block"><dt class="param">reply</dt><dd class="cmt"><p>The ReplyMessage message that represent the reply to a request.</p></dd><dt class="param">sender</dt><dd class="cmt"><p>The sender's reference of the request.
 </p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="ReplyActor.html" class="extype" name="server.actors.ReplyActor">ReplyActor</a></dd><dt>See also</dt><dd><span class="cmt"><p>#writeLog(ReplyMessage)
 </p></span><span class="cmt"><p>#reply(ReplyMessage, ActorRef)</p></span></dd></dl></div>
+    </li><li name="server.actors.Storemanager#map" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="map:java.util.concurrent.ConcurrentHashMap[String,Array[Byte]]"></a>
+      <a id="map:ConcurrentHashMap[String,Array[Byte]]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">var</span>
+      </span>
+      <span class="symbol">
+        <span class="name">map</span><span class="result">: <span class="extype" name="java.util.concurrent.ConcurrentHashMap">ConcurrentHashMap</span>[<span class="extype" name="scala.Predef.String">String</span>, <span class="extype" name="scala.Array">Array</span>[<span class="extype" name="scala.Byte">Byte</span>]]</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">the data to manage</p>
     </li><li name="scala.AnyRef#ne" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="ne(x$1:AnyRef):Boolean"></a>
       <a id="ne(AnyRef):Boolean"></a>
@@ -467,6 +512,37 @@ Handles DeleteMapMessage messages deleting Storefinder actors that represent the
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="server.actors.ClusterAwareActor#nextAddress" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="nextAddress:akka.actor.Address"></a>
+      <a id="nextAddress:Address"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">nextAddress</span><span class="result">: <span class="extype" name="akka.actor.Address">Address</span></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Returns an address of one node in the cluster.</p><div class="fullcomment"><div class="comment cmt"><p>Returns an address of one node in the cluster.
+This method sends a message to the ClusterListener of the same node of this actor
+so it will stop the thread of this actor while waiting for a response.
+</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>the address of type akka.actor.Address.
+</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="ClusterAwareActor.html" class="extype" name="server.actors.ClusterAwareActor">ClusterAwareActor</a></dd></dl></div>
+    </li><li name="server.actors.Storemanager#ninjas" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="ninjas:Array[akka.actor.ActorRef]"></a>
+      <a id="ninjas:Array[ActorRef]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">ninjas</span><span class="result">: <span class="extype" name="scala.Array">Array</span>[<span class="extype" name="akka.actor.ActorRef">ActorRef</span>]</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">the ninjas of the storemanager
+</p>
     </li><li name="scala.AnyRef#notify" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="notify():Unit"></a>
       <a id="notify():Unit"></a>
@@ -550,7 +626,7 @@ Handles DeleteMapMessage messages deleting Storefinder actors that represent the
     </span>)</span>
               
         </dd></dl></div>
-    </li><li name="akka.actor.Actor#preStart" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+    </li><li name="server.actors.Storemanager#preStart" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="preStart():Unit"></a>
       <a id="preStart():Unit"></a>
       <h4 class="signature">
@@ -562,13 +638,10 @@ Handles DeleteMapMessage messages deleting Storefinder actors that represent the
         <span class="name">preStart</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Actor</dd><dt>Annotations</dt><dd>
-                <span class="name">@throws</span><span class="args">(<span>
-      
-      <span class="symbol">classOf[java.lang.Exception]</span>
-    </span>)</span>
-              
-        </dd></dl></div>
+      <p class="shortcomment cmt">Override of the actor's preStart method.</p><div class="fullcomment"><div class="comment cmt"><p>Override of the actor's preStart method.
+Changes the actor's behaviour based on the constructor.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="server.actors.Storemanager">Storemanager</a> → Actor</dd><dt>See also</dt><dd><span class="cmt"><p>#become(Actor.receive)
+</p></span></dd></dl></div>
     </li><li name="server.actors.Storemanager#receive" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="receive:PartialFunction[Any,Unit]"></a>
       <a id="receive:PartialFunction[Any,Unit]"></a>
@@ -581,11 +654,10 @@ Handles DeleteMapMessage messages deleting Storefinder actors that represent the
         <span class="name">receive</span><span class="result">: <span class="extype" name="scala.PartialFunction">PartialFunction</span>[<span class="extype" name="scala.Any">Any</span>, <span class="extype" name="scala.Unit">Unit</span>]</span>
       </span>
       </h4>
-      <p class="shortcomment cmt">Processes all incoming messages.</p><div class="fullcomment"><div class="comment cmt"><p>Processes all incoming messages.
-Handles AskMapMessage messages replying if it contains the asked map.
-Handles MapMessage and RowMessage messages.
-</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="server.actors.Storemanager">Storemanager</a> → Actor</dd><dt>See also</dt><dd><span class="cmt"><p>#handleRowMessage(RowMessage)
-</p></span><span class="cmt"><p>#handleMapMessage(MapMessage)</p></span><span class="cmt"><p>RowMessage</p></span><span class="cmt"><p>MapMessage</p></span><span class="cmt"><p>AskMapMessage</p></span></dd></dl></div>
+      <p class="shortcomment cmt">Processes all incoming messages behaving like a Storekeeper actor.</p><div class="fullcomment"><div class="comment cmt"><p>Processes all incoming messages behaving like a Storekeeper actor.
+It handles only RowMessage messages
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="server.actors.Storemanager">Storemanager</a> → Actor</dd><dt>See also</dt><dd><span class="cmt"><p>#handleRowMessageAsStorefinder(RowMessage)
+</p></span></dd></dl></div>
     </li><li name="server.actors.ReplyActor#reply" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="reply(reply:server.messages.query.ReplyMessage,sender:akka.actor.ActorRef):Unit"></a>
       <a id="reply(ReplyMessage,ActorRef):Unit"></a>
@@ -614,6 +686,19 @@ Handles MapMessage and RowMessage messages.
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="ReplyActor.html" class="extype" name="server.actors.ReplyActor">ReplyActor</a></dd></dl></div>
+    </li><li name="server.actors.Storemanager#rightChild" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="rightChild:Storemanager.this.Child"></a>
+      <a id="rightChild:Child"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">var</span>
+      </span>
+      <span class="symbol">
+        <span class="name">rightChild</span><span class="result">: <a href="Storemanager$Child.html" class="extype" name="server.actors.Storemanager.Child">Child</a></span>
+      </span>
+      </h4>
+      
     </li><li name="akka.actor.Actor#self" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="self:akka.actor.ActorRef"></a>
       <a id="self:ActorRef"></a>
@@ -640,19 +725,19 @@ Handles MapMessage and RowMessage messages.
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Actor</dd></dl></div>
-    </li><li name="server.actors.Storemanager#storefinders" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="storefinders:java.util.concurrent.ConcurrentHashMap[String,akka.actor.ActorRef]"></a>
-      <a id="storefinders:ConcurrentHashMap[String,ActorRef]"></a>
+    </li><li name="server.actors.Storemanager#storemanagerType" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="storemanagerType:server.enums.EnumStoremanagerType.StoremanagerType"></a>
+      <a id="storemanagerType:StoremanagerType"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">val</span>
       </span>
       <span class="symbol">
-        <span class="name">storefinders</span><span class="result">: <span class="extype" name="java.util.concurrent.ConcurrentHashMap">ConcurrentHashMap</span>[<span class="extype" name="scala.Predef.String">String</span>, <span class="extype" name="akka.actor.ActorRef">ActorRef</span>]</span>
+        <span class="name">storemanagerType</span><span class="result">: <a href="../enums/EnumStoremanagerType$$StoremanagerType.html" class="extype" name="server.enums.EnumStoremanagerType.StoremanagerType">StoremanagerType</a></span>
       </span>
       </h4>
-      
+      <p class="shortcomment cmt">the behaviour of the storemanager</p>
     </li><li name="akka.actor.Actor#supervisorStrategy" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="supervisorStrategy:akka.actor.SupervisorStrategy"></a>
       <a id="supervisorStrategy:SupervisorStrategy"></a>
@@ -679,7 +764,7 @@ Handles MapMessage and RowMessage messages.
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
-    </li><li name="server.actors.Storemanager#timeout" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+    </li><li name="server.actors.ClusterAwareActor#timeout" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="timeout:akka.util.Timeout"></a>
       <a id="timeout:Timeout"></a>
       <h4 class="signature">
@@ -691,7 +776,7 @@ Handles MapMessage and RowMessage messages.
         <span class="name">timeout</span><span class="result">: <span class="extype" name="akka.util.Timeout">Timeout</span></span>
       </span>
       </h4>
-      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="ClusterAwareActor.html" class="extype" name="server.actors.ClusterAwareActor">ClusterAwareActor</a></dd></dl></div>
     </li><li name="scala.AnyRef#toString" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="toString():String"></a>
       <a id="toString():String"></a>
@@ -804,6 +889,8 @@ Handles MapMessage and RowMessage messages.
               <h3>Inherited from <a href="ReplyActor.html" class="extype" name="server.actors.ReplyActor">ReplyActor</a></h3>
             </div><div class="parent" name="akka.actor.ActorLogging">
               <h3>Inherited from <span class="extype" name="akka.actor.ActorLogging">ActorLogging</span></h3>
+            </div><div class="parent" name="server.actors.ClusterAwareActor">
+              <h3>Inherited from <a href="ClusterAwareActor.html" class="extype" name="server.actors.ClusterAwareActor">ClusterAwareActor</a></h3>
             </div><div class="parent" name="akka.actor.Actor">
               <h3>Inherited from <span class="extype" name="akka.actor.Actor">Actor</span></h3>
             </div><div class="parent" name="scala.AnyRef">

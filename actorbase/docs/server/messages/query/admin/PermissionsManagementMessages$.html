@@ -39,7 +39,7 @@
       </span>
       </h4>
       
-          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>Created by lucan on 10/05/2016.
+          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>PermissionManagementMessages are used to manage operations about user's permissions to access data.
 </p></div><div class="toggleContainer block">
           <span class="toggle">Linear Supertypes</span>
           <div class="superTypes hiddenContent"><span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
@@ -94,7 +94,7 @@
         <a href="PermissionsManagementMessages$$AddPermissionMessage.html"><span class="name">AddPermissionMessage</span></a><span class="params">(<span name="username">username: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="database">database: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="permissionType">permissionType: <a href="../../../enums/EnumPermission$$UserPermission.html" class="extype" name="server.enums.EnumPermission.UserPermission">UserPermission</a></span>)</span><span class="result"> extends <a href="PermissionsManagementMessages$$PermissionsManagementMessage.html" class="extype" name="server.messages.query.admin.PermissionsManagementMessages.PermissionsManagementMessage">PermissionsManagementMessage</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       </h4>
-      
+      <p class="comment cmt">An AddPermissionMessage is used to request the addition of a permission to a database for an user.</p>
     </li><li name="server.messages.query.admin.PermissionsManagementMessages.ListPermissionMessage" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="ListPermissionMessageextendsPermissionsManagementMessages.PermissionsManagementMessagewithProductwithSerializable"></a>
       <a id="ListPermissionMessage:ListPermissionMessage"></a>
@@ -107,7 +107,20 @@
         <a href="PermissionsManagementMessages$$ListPermissionMessage.html"><span class="name">ListPermissionMessage</span></a><span class="params">(<span name="username">username: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result"> extends <a href="PermissionsManagementMessages$$PermissionsManagementMessage.html" class="extype" name="server.messages.query.admin.PermissionsManagementMessages.PermissionsManagementMessage">PermissionsManagementMessage</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       </h4>
-      
+      <p class="comment cmt">A ListPermissionMessage is used to request the list of permission related to a specific user.</p>
+    </li><li name="server.messages.query.admin.PermissionsManagementMessages.ListPermissionsInfo" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="ListPermissionsInfoextendsReplyInfowithProductwithSerializable"></a>
+      <a id="ListPermissionsInfo:ListPermissionsInfo"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="PermissionsManagementMessages$$ListPermissionsInfo.html"><span class="name">ListPermissionsInfo</span></a><span class="params">(<span name="permissions">permissions: <span class="extype" name="java.util.HashMap">HashMap</span>[<span class="extype" name="scala.Predef.String">String</span>, <a href="../../../enums/EnumPermission$$UserPermission.html" class="extype" name="server.enums.EnumPermission.UserPermission">UserPermission</a>]</span>)</span><span class="result"> extends <a href="../ReplyInfo.html" class="extype" name="server.messages.query.ReplyInfo">ReplyInfo</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4>
+      <p class="comment cmt">A ListPermissionsInfo is used to store the list of permissions assigned to a user</p>
     </li><li name="server.messages.query.admin.PermissionsManagementMessages.PermissionsManagementMessage" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
       <a id="PermissionsManagementMessageextendsAdminMessage"></a>
       <a id="PermissionsManagementMessage:PermissionsManagementMessage"></a>
@@ -120,7 +133,7 @@
         <a href="PermissionsManagementMessages$$PermissionsManagementMessage.html"><span class="name">PermissionsManagementMessage</span></a><span class="result"> extends <a href="AdminMessage.html" class="extype" name="server.messages.query.admin.AdminMessage">AdminMessage</a></span>
       </span>
       </h4>
-      
+      <p class="comment cmt">Trait that every message that belongs to permissions management operations has to extend.</p>
     </li><li name="server.messages.query.admin.PermissionsManagementMessages.RemovePermissionMessage" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="RemovePermissionMessageextendsPermissionsManagementMessages.PermissionsManagementMessagewithProductwithSerializable"></a>
       <a id="RemovePermissionMessage:RemovePermissionMessage"></a>
@@ -133,7 +146,7 @@
         <a href="PermissionsManagementMessages$$RemovePermissionMessage.html"><span class="name">RemovePermissionMessage</span></a><span class="params">(<span name="username">username: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="database">database: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result"> extends <a href="PermissionsManagementMessages$$PermissionsManagementMessage.html" class="extype" name="server.messages.query.admin.PermissionsManagementMessages.PermissionsManagementMessage">PermissionsManagementMessage</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       </h4>
-      
+      <p class="comment cmt">A RemovePermissionMessage is used to request the removal of a permission to a database for an user.</p>
     </li></ol>
             </div>
 

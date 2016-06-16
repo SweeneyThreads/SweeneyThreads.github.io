@@ -39,7 +39,7 @@
       </span>
       </h4>
       
-          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>Created by matteobortolazzo on 02/05/2016.
+          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>RowMessages are used to manage operations on items.
 </p></div><div class="toggleContainer block">
           <span class="toggle">Linear Supertypes</span>
           <div class="superTypes hiddenContent"><span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
@@ -94,7 +94,7 @@
         <a href="RowMessages$$FindInfo.html"><span class="name">FindInfo</span></a><span class="params">(<span name="value">value: <span class="extype" name="scala.Array">Array</span>[<span class="extype" name="scala.Byte">Byte</span>]</span>)</span><span class="result"> extends <a href="../ReplyInfo.html" class="extype" name="server.messages.query.ReplyInfo">ReplyInfo</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       </h4>
-      
+      <p class="comment cmt">A FindInfo is used as response to a find item request, returning the value of the item.</p>
     </li><li name="server.messages.query.user.RowMessages.FindRowMessage" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="FindRowMessageextendsRowMessages.RowMessagewithPermissionMessages.ReadMessagewithProductwithSerializable"></a>
       <a id="FindRowMessage:FindRowMessage"></a>
@@ -107,20 +107,7 @@
         <a href="RowMessages$$FindRowMessage.html"><span class="name">FindRowMessage</span></a><span class="params">(<span name="key">key: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result"> extends <a href="RowMessages$$RowMessage.html" class="extype" name="server.messages.query.user.RowMessages.RowMessage">RowMessage</a> with <a href="../PermissionMessages$$ReadMessage.html" class="extype" name="server.messages.query.PermissionMessages.ReadMessage">ReadMessage</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       </h4>
-      
-    </li><li name="server.messages.query.user.RowMessages.FullMap" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="FullMapextendsReplyInfowithProductwithSerializable"></a>
-      <a id="FullMap:FullMap"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">case class</span>
-      </span>
-      <span class="symbol">
-        <a href="RowMessages$$FullMap.html"><span class="name">FullMap</span></a><span class="params">()</span><span class="result"> extends <a href="../ReplyInfo.html" class="extype" name="server.messages.query.ReplyInfo">ReplyInfo</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
-      </span>
-      </h4>
-      
+      <p class="comment cmt">An FindRowMessage is used to request the value of an item on the selected map.</p>
     </li><li name="server.messages.query.user.RowMessages.InsertRowMessage" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="InsertRowMessageextendsRowMessages.RowMessagewithPermissionMessages.ReadWriteMessagewithProductwithSerializable"></a>
       <a id="InsertRowMessage:InsertRowMessage"></a>
@@ -133,7 +120,7 @@
         <a href="RowMessages$$InsertRowMessage.html"><span class="name">InsertRowMessage</span></a><span class="params">(<span name="key">key: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="value">value: <span class="extype" name="scala.Array">Array</span>[<span class="extype" name="scala.Byte">Byte</span>]</span>)</span><span class="result"> extends <a href="RowMessages$$RowMessage.html" class="extype" name="server.messages.query.user.RowMessages.RowMessage">RowMessage</a> with <a href="../PermissionMessages$$ReadWriteMessage.html" class="extype" name="server.messages.query.PermissionMessages.ReadWriteMessage">ReadWriteMessage</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       </h4>
-      
+      <p class="comment cmt">An InsertRowMessage is used to request the insert of an item on the selected map.</p>
     </li><li name="server.messages.query.user.RowMessages.KeyAlreadyExistInfo" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="KeyAlreadyExistInfoextendsReplyInfowithProductwithSerializable"></a>
       <a id="KeyAlreadyExistInfo:KeyAlreadyExistInfo"></a>
@@ -146,7 +133,8 @@
         <a href="RowMessages$$KeyAlreadyExistInfo.html"><span class="name">KeyAlreadyExistInfo</span></a><span class="params">()</span><span class="result"> extends <a href="../ReplyInfo.html" class="extype" name="server.messages.query.ReplyInfo">ReplyInfo</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       </h4>
-      
+      <p class="comment cmt">A KeyAlreadyExistInfo is used as response to a insert item request, if the item requested for creation already
+exist.</p>
     </li><li name="server.messages.query.user.RowMessages.KeyDoesNotExistInfo" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="KeyDoesNotExistInfoextendsReplyInfowithProductwithSerializable"></a>
       <a id="KeyDoesNotExistInfo:KeyDoesNotExistInfo"></a>
@@ -159,7 +147,7 @@
         <a href="RowMessages$$KeyDoesNotExistInfo.html"><span class="name">KeyDoesNotExistInfo</span></a><span class="params">()</span><span class="result"> extends <a href="../ReplyInfo.html" class="extype" name="server.messages.query.ReplyInfo">ReplyInfo</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       </h4>
-      
+      <p class="comment cmt">A KeyDoesNotExistInfo is used as response to a item request, if the item requested does not exist.</p>
     </li><li name="server.messages.query.user.RowMessages.ListKeyInfo" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="ListKeyInfoextendsReplyInfowithProductwithSerializable"></a>
       <a id="ListKeyInfo:ListKeyInfo"></a>
@@ -172,7 +160,7 @@
         <a href="RowMessages$$ListKeyInfo.html"><span class="name">ListKeyInfo</span></a><span class="params">(<span name="keys">keys: <span class="extype" name="scala.List">List</span>[<span class="extype" name="scala.Predef.String">String</span>]</span>)</span><span class="result"> extends <a href="../ReplyInfo.html" class="extype" name="server.messages.query.ReplyInfo">ReplyInfo</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       </h4>
-      
+      <p class="comment cmt">A ListKeyInfo is used as response to a list keys request.</p>
     </li><li name="server.messages.query.user.RowMessages.ListKeysMessage" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="ListKeysMessageextendsRowMessages.RowMessagewithPermissionMessages.ReadMessagewithProductwithSerializable"></a>
       <a id="ListKeysMessage:ListKeysMessage"></a>
@@ -185,20 +173,20 @@
         <a href="RowMessages$$ListKeysMessage.html"><span class="name">ListKeysMessage</span></a><span class="params">()</span><span class="result"> extends <a href="RowMessages$$RowMessage.html" class="extype" name="server.messages.query.user.RowMessages.RowMessage">RowMessage</a> with <a href="../PermissionMessages$$ReadMessage.html" class="extype" name="server.messages.query.PermissionMessages.ReadMessage">ReadMessage</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       </h4>
-      
-    </li><li name="server.messages.query.user.RowMessages.NoKeyInfo" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="NoKeyInfoextendsReplyInfowithProductwithSerializable"></a>
-      <a id="NoKeyInfo:NoKeyInfo"></a>
+      <p class="comment cmt">A ListKeysMessage is used to request the list of keys that compose the selected map.</p>
+    </li><li name="server.messages.query.user.RowMessages.NoKeysInfo" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="NoKeysInfoextendsReplyInfowithProductwithSerializable"></a>
+      <a id="NoKeysInfo:NoKeysInfo"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <a href="RowMessages$$NoKeyInfo.html"><span class="name">NoKeyInfo</span></a><span class="params">()</span><span class="result"> extends <a href="../ReplyInfo.html" class="extype" name="server.messages.query.ReplyInfo">ReplyInfo</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+        <a href="RowMessages$$NoKeysInfo.html"><span class="name">NoKeysInfo</span></a><span class="params">()</span><span class="result"> extends <a href="../ReplyInfo.html" class="extype" name="server.messages.query.ReplyInfo">ReplyInfo</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       </h4>
-      
+      <p class="comment cmt">A NoKeyInfo is used as response to a list keys request if no keys are present in the selected map.</p>
     </li><li name="server.messages.query.user.RowMessages.RemoveRowMessage" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="RemoveRowMessageextendsRowMessages.RowMessagewithPermissionMessages.ReadWriteMessagewithProductwithSerializable"></a>
       <a id="RemoveRowMessage:RemoveRowMessage"></a>
@@ -211,7 +199,7 @@
         <a href="RowMessages$$RemoveRowMessage.html"><span class="name">RemoveRowMessage</span></a><span class="params">(<span name="key">key: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result"> extends <a href="RowMessages$$RowMessage.html" class="extype" name="server.messages.query.user.RowMessages.RowMessage">RowMessage</a> with <a href="../PermissionMessages$$ReadWriteMessage.html" class="extype" name="server.messages.query.PermissionMessages.ReadWriteMessage">ReadWriteMessage</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       </h4>
-      
+      <p class="comment cmt">An RemoveRowMessage is used to request the removal of an item on the selected map.</p>
     </li><li name="server.messages.query.user.RowMessages.RowMessage" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
       <a id="RowMessageextendsUserMessage"></a>
       <a id="RowMessage:RowMessage"></a>
@@ -224,7 +212,7 @@
         <a href="RowMessages$$RowMessage.html"><span class="name">RowMessage</span></a><span class="result"> extends <a href="UserMessage.html" class="extype" name="server.messages.query.user.UserMessage">UserMessage</a></span>
       </span>
       </h4>
-      
+      <p class="comment cmt">Trait that every message which belongs to rows operations has to extend.</p>
     </li><li name="server.messages.query.user.RowMessages.StorefinderRowMessage" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="StorefinderRowMessageextendsRowMessages.RowMessagewithProductwithSerializable"></a>
       <a id="StorefinderRowMessage:StorefinderRowMessage"></a>
@@ -237,7 +225,7 @@
         <a href="RowMessages$$StorefinderRowMessage.html"><span class="name">StorefinderRowMessage</span></a><span class="params">(<span name="mapName">mapName: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="rowMessage">rowMessage: <a href="RowMessages$$RowMessage.html" class="extype" name="server.messages.query.user.RowMessages.RowMessage">RowMessage</a></span>)</span><span class="result"> extends <a href="RowMessages$$RowMessage.html" class="extype" name="server.messages.query.user.RowMessages.RowMessage">RowMessage</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       </h4>
-      
+      <p class="comment cmt">A StorefinderRowMessage is used to pass the RowMessage to the Storefinder which represents the selected map.</p>
     </li><li name="server.messages.query.user.RowMessages.UpdateRowMessage" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="UpdateRowMessageextendsRowMessages.RowMessagewithPermissionMessages.ReadWriteMessagewithProductwithSerializable"></a>
       <a id="UpdateRowMessage:UpdateRowMessage"></a>
@@ -250,7 +238,7 @@
         <a href="RowMessages$$UpdateRowMessage.html"><span class="name">UpdateRowMessage</span></a><span class="params">(<span name="key">key: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="value">value: <span class="extype" name="scala.Array">Array</span>[<span class="extype" name="scala.Byte">Byte</span>]</span>)</span><span class="result"> extends <a href="RowMessages$$RowMessage.html" class="extype" name="server.messages.query.user.RowMessages.RowMessage">RowMessage</a> with <a href="../PermissionMessages$$ReadWriteMessage.html" class="extype" name="server.messages.query.PermissionMessages.ReadWriteMessage">ReadWriteMessage</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       </h4>
-      
+      <p class="comment cmt">An UpdateRowMessage is used to request the update of an item on the selected map.</p>
     </li></ol>
             </div>
 

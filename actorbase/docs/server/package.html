@@ -56,13 +56,68 @@
         <div id="allMembers">
         
 
-        
+        <div id="types" class="types members">
+              <h3>Type Members</h3>
+              <ol><li name="server.ClusterListener" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="ClusterListenerextendsActorwithActorLogging"></a>
+      <a id="ClusterListener:ClusterListener"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="ClusterListener.html"><span class="name">ClusterListener</span></a><span class="result"> extends <span class="extype" name="akka.actor.Actor">Actor</span> with <span class="extype" name="akka.actor.ActorLogging">ActorLogging</span></span>
+      </span>
+      </h4>
+      <p class="comment cmt">Trait actor responsible of keeping the addresses of the nodes marked as UP in the cluster.</p>
+    </li><li name="server.RemoteAssistant" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="RemoteAssistantextendsActor"></a>
+      <a id="RemoteAssistant:RemoteAssistant"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="RemoteAssistant.html"><span class="name">RemoteAssistant</span></a><span class="result"> extends <span class="extype" name="akka.actor.Actor">Actor</span></span>
+      </span>
+      </h4>
+      <p class="comment cmt">RemoteAssistant is an actor that the SettingsManager deploys on every node up in cluster.</p>
+    </li><li name="server.SettingsManager" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="SettingsManagerextendsClusterListener"></a>
+      <a id="SettingsManager:SettingsManager"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="SettingsManager.html"><span class="name">SettingsManager</span></a><span class="result"> extends <a href="ClusterListener.html" class="extype" name="server.ClusterListener">ClusterListener</a></span>
+      </span>
+      </h4>
+      <p class="comment cmt">SettingsManager is an actor that keeps the StaticSettings equal in all nodes of the cluster.</p>
+    </li></ol>
+            </div>
 
         
 
         <div id="values" class="values members">
               <h3>Value Members</h3>
-              <ol><li name="server.Server" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+              <ol><li name="server.DistributionStrategy" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="DistributionStrategy"></a>
+      <a id="DistributionStrategy:DistributionStrategy"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="DistributionStrategy$.html"><span class="name">DistributionStrategy</span></a>
+      </span>
+      </h4>
+      <p class="comment cmt">DistributionStrategy are used to manage the location of actors in the Cluster.</p>
+    </li><li name="server.Server" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="Server"></a>
       <a id="Server:Server"></a>
       <h4 class="signature">
@@ -75,6 +130,20 @@
       </span>
       </h4>
       <p class="comment cmt">The Actorbase server, contains the main method of the server-side application of Actorbase.</p>
+    </li><li name="server.StaticSettings" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="StaticSettings"></a>
+      <a id="StaticSettings:StaticSettings"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="StaticSettings$.html"><span class="name">StaticSettings</span></a>
+      </span>
+      </h4>
+      <p class="comment cmt">Contains the list of reference of all StoreManager actors
+</p>
     </li><li name="server.actors" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="actors"></a>
       <a id="actors:actors"></a>

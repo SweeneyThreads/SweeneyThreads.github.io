@@ -39,7 +39,7 @@
       </span>
       </h4>
       
-          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>Created by lucan on 10/05/2016.
+          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>UserManagementMessages are used to manage the users who have access to the server.
 </p></div><div class="toggleContainer block">
           <span class="toggle">Linear Supertypes</span>
           <div class="superTypes hiddenContent"><span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
@@ -82,7 +82,21 @@
 
         <div id="types" class="types members">
               <h3>Type Members</h3>
-              <ol><li name="server.messages.query.admin.UsersManagementMessages.AddUserMessage" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+              <ol><li name="server.messages.query.admin.UsersManagementMessages.AddUserInfo" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="AddUserInfoextendsReplyInfowithProductwithSerializable"></a>
+      <a id="AddUserInfo:AddUserInfo"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="UsersManagementMessages$$AddUserInfo.html"><span class="name">AddUserInfo</span></a><span class="params">()</span><span class="result"> extends <a href="../ReplyInfo.html" class="extype" name="server.messages.query.ReplyInfo">ReplyInfo</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4>
+      <p class="comment cmt">An AddUserInfo is a ReplyInfo containing the response to print on the console when an AddUserMessage has
+been processed.</p>
+    </li><li name="server.messages.query.admin.UsersManagementMessages.AddUserMessage" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="AddUserMessageextendsUsersManagementMessages.UsersManagementMessagewithProductwithSerializable"></a>
       <a id="AddUserMessage:AddUserMessage"></a>
       <h4 class="signature">
@@ -94,7 +108,22 @@
         <a href="UsersManagementMessages$$AddUserMessage.html"><span class="name">AddUserMessage</span></a><span class="params">(<span name="username">username: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="password">password: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result"> extends <a href="UsersManagementMessages$$UsersManagementMessage.html" class="extype" name="server.messages.query.admin.UsersManagementMessages.UsersManagementMessage">UsersManagementMessage</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       </h4>
-      
+      <p class="comment cmt">An AddUserMessage is used to add an user with username and password to the list of users who have access to
+the server
+</p>
+    </li><li name="server.messages.query.admin.UsersManagementMessages.ListUserInfo" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="ListUserInfoextendsReplyInfowithProductwithSerializable"></a>
+      <a id="ListUserInfo:ListUserInfo"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="UsersManagementMessages$$ListUserInfo.html"><span class="name">ListUserInfo</span></a><span class="params">(<span name="userList">userList: <span class="extype" name="scala.List">List</span>[<span class="extype" name="scala.Predef.String">String</span>]</span>)</span><span class="result"> extends <a href="../ReplyInfo.html" class="extype" name="server.messages.query.ReplyInfo">ReplyInfo</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4>
+      <p class="comment cmt">A ListUserInfo is used as a ReplyInfo to format the response from a ListUserMessage.</p>
     </li><li name="server.messages.query.admin.UsersManagementMessages.ListUserMessage" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="ListUserMessageextendsUsersManagementMessages.UsersManagementMessagewithProductwithSerializable"></a>
       <a id="ListUserMessage:ListUserMessage"></a>
@@ -107,7 +136,36 @@
         <a href="UsersManagementMessages$$ListUserMessage.html"><span class="name">ListUserMessage</span></a><span class="params">()</span><span class="result"> extends <a href="UsersManagementMessages$$UsersManagementMessage.html" class="extype" name="server.messages.query.admin.UsersManagementMessages.UsersManagementMessage">UsersManagementMessage</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       </h4>
-      
+      <p class="comment cmt">A ListUserMessage is used to ask for the list of users who have access to the server.</p>
+    </li><li name="server.messages.query.admin.UsersManagementMessages.NoUserInfo" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="NoUserInfoextendsReplyInfowithProductwithSerializable"></a>
+      <a id="NoUserInfo:NoUserInfo"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="UsersManagementMessages$$NoUserInfo.html"><span class="name">NoUserInfo</span></a><span class="params">()</span><span class="result"> extends <a href="../ReplyInfo.html" class="extype" name="server.messages.query.ReplyInfo">ReplyInfo</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4>
+      <p class="comment cmt">A NoUserInfo is user as a ReplyInfo to handle a request that need to modify something of a user that does
+not exist
+in the 'users' map in the 'master' database.</p>
+    </li><li name="server.messages.query.admin.UsersManagementMessages.RemoveUserInfo" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="RemoveUserInfoextendsReplyInfowithProductwithSerializable"></a>
+      <a id="RemoveUserInfo:RemoveUserInfo"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="UsersManagementMessages$$RemoveUserInfo.html"><span class="name">RemoveUserInfo</span></a><span class="params">()</span><span class="result"> extends <a href="../ReplyInfo.html" class="extype" name="server.messages.query.ReplyInfo">ReplyInfo</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4>
+      <p class="comment cmt">A RemoveUserInfo is a ReplyInfo containing the response to print on the console when a RemoveUserMessage has
+been processed.</p>
     </li><li name="server.messages.query.admin.UsersManagementMessages.RemoveUserMessage" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="RemoveUserMessageextendsUsersManagementMessages.UsersManagementMessagewithProductwithSerializable"></a>
       <a id="RemoveUserMessage:RemoveUserMessage"></a>
@@ -120,7 +178,7 @@
         <a href="UsersManagementMessages$$RemoveUserMessage.html"><span class="name">RemoveUserMessage</span></a><span class="params">(<span name="username">username: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result"> extends <a href="UsersManagementMessages$$UsersManagementMessage.html" class="extype" name="server.messages.query.admin.UsersManagementMessages.UsersManagementMessage">UsersManagementMessage</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       </h4>
-      
+      <p class="comment cmt">A RemoveUserMessage is used to remove an user from the list of users who have acces to the server.</p>
     </li><li name="server.messages.query.admin.UsersManagementMessages.UsersManagementMessage" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
       <a id="UsersManagementMessageextendsAdminMessage"></a>
       <a id="UsersManagementMessage:UsersManagementMessage"></a>
@@ -133,7 +191,7 @@
         <a href="UsersManagementMessages$$UsersManagementMessage.html"><span class="name">UsersManagementMessage</span></a><span class="result"> extends <a href="AdminMessage.html" class="extype" name="server.messages.query.admin.AdminMessage">AdminMessage</a></span>
       </span>
       </h4>
-      
+      <p class="comment cmt">Trait that every message that belongs to user management operations has to extend.</p>
     </li></ol>
             </div>
 

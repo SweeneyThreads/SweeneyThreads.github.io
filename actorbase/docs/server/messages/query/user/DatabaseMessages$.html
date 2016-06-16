@@ -39,7 +39,7 @@
       </span>
       </h4>
       
-          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>Created by matteobortolazzo on 02/05/2016.
+          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>DatabaseMessages are used to manage operations on databases.
 </p></div><div class="toggleContainer block">
           <span class="toggle">Linear Supertypes</span>
           <div class="superTypes hiddenContent"><span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
@@ -94,7 +94,7 @@
         <a href="DatabaseMessages$$CreateDatabaseMessage.html"><span class="name">CreateDatabaseMessage</span></a><span class="params">(<span name="name">name: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result"> extends <a href="DatabaseMessages$$DatabaseMessage.html" class="extype" name="server.messages.query.user.DatabaseMessages.DatabaseMessage">DatabaseMessage</a> with <a href="../PermissionMessages$$NoPermissionMessage.html" class="extype" name="server.messages.query.PermissionMessages.NoPermissionMessage">NoPermissionMessage</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       </h4>
-      
+      <p class="comment cmt">A CreateDatabaseMessage is used to request the creation of a new database with the given name.</p>
     </li><li name="server.messages.query.user.DatabaseMessages.DBAlreadyExistInfo" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="DBAlreadyExistInfoextendsReplyInfowithProductwithSerializable"></a>
       <a id="DBAlreadyExistInfo:DBAlreadyExistInfo"></a>
@@ -107,7 +107,9 @@
         <a href="DatabaseMessages$$DBAlreadyExistInfo.html"><span class="name">DBAlreadyExistInfo</span></a><span class="params">()</span><span class="result"> extends <a href="../ReplyInfo.html" class="extype" name="server.messages.query.ReplyInfo">ReplyInfo</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       </h4>
-      
+      <p class="comment cmt">A DBAlreadyExistInfo is used as response to a create database request, if the database requested for creation
+already exists
+</p>
     </li><li name="server.messages.query.user.DatabaseMessages.DBDoesNotExistInfo" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="DBDoesNotExistInfoextendsReplyInfowithProductwithSerializable"></a>
       <a id="DBDoesNotExistInfo:DBDoesNotExistInfo"></a>
@@ -120,7 +122,7 @@
         <a href="DatabaseMessages$$DBDoesNotExistInfo.html"><span class="name">DBDoesNotExistInfo</span></a><span class="params">()</span><span class="result"> extends <a href="../ReplyInfo.html" class="extype" name="server.messages.query.ReplyInfo">ReplyInfo</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       </h4>
-      
+      <p class="comment cmt">A DBDoesNotExistInfo is used as response to a database request which asks for a database that does not exist.</p>
     </li><li name="server.messages.query.user.DatabaseMessages.DatabaseMessage" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
       <a id="DatabaseMessageextendsUserMessage"></a>
       <a id="DatabaseMessage:DatabaseMessage"></a>
@@ -133,7 +135,7 @@
         <a href="DatabaseMessages$$DatabaseMessage.html"><span class="name">DatabaseMessage</span></a><span class="result"> extends <a href="UserMessage.html" class="extype" name="server.messages.query.user.UserMessage">UserMessage</a></span>
       </span>
       </h4>
-      
+      <p class="comment cmt">Trait that every message which belongs to database operations has to extend.</p>
     </li><li name="server.messages.query.user.DatabaseMessages.DeleteDatabaseMessage" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="DeleteDatabaseMessageextendsDatabaseMessages.DatabaseMessagewithPermissionMessages.ReadWriteMessagewithProductwithSerializable"></a>
       <a id="DeleteDatabaseMessage:DeleteDatabaseMessage"></a>
@@ -146,7 +148,7 @@
         <a href="DatabaseMessages$$DeleteDatabaseMessage.html"><span class="name">DeleteDatabaseMessage</span></a><span class="params">(<span name="name">name: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result"> extends <a href="DatabaseMessages$$DatabaseMessage.html" class="extype" name="server.messages.query.user.DatabaseMessages.DatabaseMessage">DatabaseMessage</a> with <a href="../PermissionMessages$$ReadWriteMessage.html" class="extype" name="server.messages.query.PermissionMessages.ReadWriteMessage">ReadWriteMessage</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       </h4>
-      
+      <p class="comment cmt">A DeleteDatabaseMessage is used to request the deletion of the database with the given name.</p>
     </li><li name="server.messages.query.user.DatabaseMessages.ListDBInfo" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="ListDBInfoextendsReplyInfowithProductwithSerializable"></a>
       <a id="ListDBInfo:ListDBInfo"></a>
@@ -159,7 +161,7 @@
         <a href="DatabaseMessages$$ListDBInfo.html"><span class="name">ListDBInfo</span></a><span class="params">(<span name="dbs">dbs: <span class="extype" name="scala.List">List</span>[<span class="extype" name="scala.Predef.String">String</span>]</span>)</span><span class="result"> extends <a href="../ReplyInfo.html" class="extype" name="server.messages.query.ReplyInfo">ReplyInfo</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       </h4>
-      
+      <p class="comment cmt">A ListDBInfo is used as response to a list database request.</p>
     </li><li name="server.messages.query.user.DatabaseMessages.ListDatabaseMessage" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="ListDatabaseMessageextendsDatabaseMessages.DatabaseMessagewithPermissionMessages.ReadMessagewithProductwithSerializable"></a>
       <a id="ListDatabaseMessage:ListDatabaseMessage"></a>
@@ -172,7 +174,7 @@
         <a href="DatabaseMessages$$ListDatabaseMessage.html"><span class="name">ListDatabaseMessage</span></a><span class="params">()</span><span class="result"> extends <a href="DatabaseMessages$$DatabaseMessage.html" class="extype" name="server.messages.query.user.DatabaseMessages.DatabaseMessage">DatabaseMessage</a> with <a href="../PermissionMessages$$ReadMessage.html" class="extype" name="server.messages.query.PermissionMessages.ReadMessage">ReadMessage</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       </h4>
-      
+      <p class="comment cmt">A ListDatabaseMessage is used to request the list of databases present on the server.</p>
     </li><li name="server.messages.query.user.DatabaseMessages.NoDBInfo" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="NoDBInfoextendsReplyInfowithProductwithSerializable"></a>
       <a id="NoDBInfo:NoDBInfo"></a>
@@ -185,7 +187,7 @@
         <a href="DatabaseMessages$$NoDBInfo.html"><span class="name">NoDBInfo</span></a><span class="params">()</span><span class="result"> extends <a href="../ReplyInfo.html" class="extype" name="server.messages.query.ReplyInfo">ReplyInfo</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       </h4>
-      
+      <p class="comment cmt">A NoDBInfo is used as response to a list database request if no databases are present on the server.</p>
     </li><li name="server.messages.query.user.DatabaseMessages.NoDBSelectedInfo" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="NoDBSelectedInfoextendsReplyInfowithProductwithSerializable"></a>
       <a id="NoDBSelectedInfo:NoDBSelectedInfo"></a>
@@ -198,7 +200,8 @@
         <a href="DatabaseMessages$$NoDBSelectedInfo.html"><span class="name">NoDBSelectedInfo</span></a><span class="params">()</span><span class="result"> extends <a href="../ReplyInfo.html" class="extype" name="server.messages.query.ReplyInfo">ReplyInfo</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       </h4>
-      
+      <p class="comment cmt">A NoDBSelectedInfo is used as response to a request on a map or on a row when no database has previously been
+selected.</p>
     </li><li name="server.messages.query.user.DatabaseMessages.SelectDatabaseMessage" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="SelectDatabaseMessageextendsDatabaseMessages.DatabaseMessagewithPermissionMessages.ReadMessagewithProductwithSerializable"></a>
       <a id="SelectDatabaseMessage:SelectDatabaseMessage"></a>
@@ -211,7 +214,7 @@
         <a href="DatabaseMessages$$SelectDatabaseMessage.html"><span class="name">SelectDatabaseMessage</span></a><span class="params">(<span name="name">name: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result"> extends <a href="DatabaseMessages$$DatabaseMessage.html" class="extype" name="server.messages.query.user.DatabaseMessages.DatabaseMessage">DatabaseMessage</a> with <a href="../PermissionMessages$$ReadMessage.html" class="extype" name="server.messages.query.PermissionMessages.ReadMessage">ReadMessage</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       </h4>
-      
+      <p class="comment cmt">A SelectDatabaseMessage is used to request the select of the database with the given name.</p>
     </li></ol>
             </div>
 
